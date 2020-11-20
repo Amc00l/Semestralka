@@ -1,0 +1,150 @@
+
+
+.BackGround{
+    background-image: url("Pictures/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    margin-bottom: -50px;
+
+
+
+
+}
+
+.Logo{
+
+    margin-top: 1%;
+    margin-left: 1%;
+
+}
+.bg-color{
+    background-color: darkorange;
+}
+
+.navbar a:hover {
+    background-color: orangered;
+    color:black;
+
+}
+
+.nav-link{
+    font-size:20px;
+    font-weight: bold;
+
+}
+
+
+
+.TextKontakt {
+    text-align:  center;
+    margin: auto;
+    color: white;
+    padding-bottom:1%;
+}
+.Obsah {
+
+    background: rgba(0,0,0,0.95);
+    margin: auto;
+    width: 60%;
+    min-height: calc(100vh - 70px);
+
+
+}
+
+
+.Pata {
+    height: 50px;
+
+    min-height: 1vh;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    padding-left:1%;
+    color: white;
+
+
+}
+.Format  {
+
+    font-size: 20px;
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+    color: white;
+    margin:auto;
+
+
+}
+.Format h1 {
+    padding-bottom:10%;
+    padding-top:10%
+
+}
+
+.Text {
+    font-size: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
+    color: white;
+    margin:auto;
+    padding-bottom:1%;
+
+
+}
+
+.Text h1,h2 {
+    text-align:  center;
+    font-weight: bold;
+
+}
+.Text h1 {
+    padding-top: 5%;
+    padding-bottom:1%;
+    font-size: 40px;
+}
+.Text h2{
+    font-size: 30px;
+
+}
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gallery >div {
+    background: rgba(0,0,0,0.95);
+    margin: 80px;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .Logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .gallery div a img {
+        width: 200px;
+        height: 150px;
+    }
+
+    .Obsah {
+        width: 100%;
+    }
+
+
+    .gallery div div {
+        font-size: 15px;
+    }
+
+
+}
+

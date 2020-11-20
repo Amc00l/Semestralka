@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ee7c6286-909b-4827-a5cb-9198e3c73bfb" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kSYOST8zUfQ0ZVp44g2edwkzgu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cvicenie6" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Server.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Server.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.Server.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee7c6286-909b-4827-a5cb-9198e3c73bfb" name="Default Changelist" comment="" />
+      <created>1605695427975</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605695427975</updated>
+      <workItem from="1605695429012" duration="362000" />
+      <workItem from="1605695803334" duration="1540000" />
+      <workItem from="1605697520198" duration="75000" />
+      <workItem from="1605701432613" duration="26334000" />
+      <workItem from="1605730970983" duration="7354000" />
+      <workItem from="1605774814236" duration="1034000" />
+      <workItem from="1605776487724" duration="13342000" />
+      <workItem from="1605879753348" duration="30878000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="336" y="361" key="#SQL_Dialects" timestamp="1605709455328">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="336" y="361" key="#SQL_Dialects/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605709455328" />
+    <state x="779" y="338" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605708466151">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="779" y="338" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605708466151" />
+    <state x="582" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605897802410">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="582" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605897802410" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605735883155">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605735883155" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605710890215">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605710890215" />
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605695632178" />
+    <state x="724" y="243" key="NewPhpClassDialog" timestamp="1605909736331">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="724" y="243" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605909736331" />
+    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog" timestamp="1605909742793">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605909742793" />
+    <state x="2714" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605695572122" />
+    <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1605708507188">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605708507188" />
+    <state x="850" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1605708839075">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="850" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605708839075" />
+    <state x="818" y="258" width="801" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605782089989">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="818" y="258" width="801" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605782089989" />
+    <state x="712" y="328" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1605775080772">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="712" y="328" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605775080772" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1605775119123">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605775119123" />
+    <state x="781" y="291" key="refactoring.ChangeSignatureDialog" timestamp="1605898151506">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="781" y="291" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605898151506" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605905447646">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605905447646" />
+  </component>
+</project>
