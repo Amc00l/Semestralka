@@ -15,13 +15,10 @@
 
 <head>
     <title>Prihlaseny</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <?php
+        $view->headerRequimenets();
+
+    ?>
 
 
 </head>
@@ -43,26 +40,35 @@
             <div class="Text">
                 <h1>Účet</h1>
 
-                <form action="ChangePass.php" method="post">
+                    <form action="ChangePass.php" method="post">
+                        <div class="userInfo">
+                            <p>Užívateľ: <?php echo $user->getUsername(); ?></p>
+                            <p>Meno: <?php echo $user->getName(); ?></p>
+                            <p>Priezvisko: <?php echo $user->getSurname(); ?></p>
+                            <p>Email: <?php echo $user->getEmail(); ?></p>
 
-                        <p>Užívateľ: <?php echo $user->getUsername(); ?></p>
-                        <p>Email: <?php echo $user->getEmail(); ?></p>
-
-                        <div class="form-group">
-                            <input type="submit" class="btn btn-dark" value="Zmena hesla">
                         </div>
 
 
+                        <div class="form-group">
+                            <div class="userInfo">
+                                <input type="submit" class="btn btn-dark" value="Zmena hesla">
+                            </div>
+                        </div>
 
-                </form>
+                    </form>
 
-                <form action="" method="post">
 
-                    <div class="form-group">
-                        <input type="submit" name="Delete" class="btn btn-dark" value="Zmazať účet">
-                    </div>
+                    <form action="" method="post">
 
-                </form>
+                        <div class="form-group">
+                            <div class="userInfo">
+                                <input type="submit" name="Delete" class="btn btn-dark" value="Zmazať účet">
+                            </div>
+                        </div>
+
+                    </form>
+
             </div>
 
 

@@ -1,4 +1,7 @@
+.body{
 
+
+}
 
 .BackGround{
     background-image: url("Pictures/background.jpg");
@@ -45,9 +48,10 @@
     padding-bottom:1%;
 }
 .Obsah {
-
+    font-family: "Times New Roman", Times, serif;
     background: rgba(0,0,0,0.95);
     margin: auto;
+    font-size: 20px;
     width: 60%;
     min-height: calc(100vh - 70px);
 
@@ -66,9 +70,13 @@
 
 
 }
-.Format  {
 
-    font-size: 20px;
+
+
+
+.Format {
+
+    font-size: 25px;
     text-align: center;
     padding-left: 30%;
     padding-right: 30%;
@@ -84,6 +92,7 @@
 }
 
 .Text {
+
     font-size: 20px;
     padding-left: 10%;
     padding-right: 10%;
@@ -92,6 +101,11 @@
     margin:auto;
     padding-bottom:1%;
 
+
+}
+.userInfo{
+    text-align:  center;
+    font-weight: bold;
 
 }
 
