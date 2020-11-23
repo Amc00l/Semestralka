@@ -161,6 +161,7 @@
                 $sqlUpdatePass = "UPDATE users SET password='$newPass'  WHERE username = '$username'";
                 $result = mysqli_query($con, $sqlUpdatePass);
                 if($result) {
+                    $user->setPass($_POST['passNew']);
                     array_push($_SESSION['array'],"Heslo úspešne zmenené");
                 }
 

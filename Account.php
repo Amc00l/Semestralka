@@ -72,13 +72,10 @@
             </div>
 
 
+        </div>
 
 
 
-            </div>
-
-
-    </div>
     <footer class="Pata">
         <p>Copyright 2020 ©</p>
 
