@@ -103,6 +103,8 @@
 
 
 }
+
+
 .userInfo{
     text-align:  center;
     font-weight: bold;
@@ -128,6 +130,11 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+.Eshop {
+    padding-top: 50px;
+}
+
 
 .gallery >div {
     background: rgba(0,0,0,0.95);
