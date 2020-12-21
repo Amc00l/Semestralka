@@ -19,10 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee7c6286-909b-4827-a5cb-9198e3c73bfb" name="Default Changelist" comment="Version 2.02">
-      <change afterPath="$PROJECT_DIR$/Shop.php" afterDir="false" />
+    <list default="true" id="ee7c6286-909b-4827-a5cb-9198e3c73bfb" name="Default Changelist" comment="Version 3.01">
+      <change afterPath="$PROJECT_DIR$/Cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pictures/Pipe125.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f0c024c9-186b-482a-8bb5-d83bc58afd95.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f0c024c9-186b-482a-8bb5-d83bc58afd95.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/View.php" afterDir="false" />
     </list>
@@ -39,6 +42,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -59,12 +63,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Pictures" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\Pictures" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\Pictures" />
       <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka" />
     </key>
   </component>
@@ -99,7 +107,9 @@
       <workItem from="1606200677300" duration="1787000" />
       <workItem from="1606806594748" duration="28000" />
       <workItem from="1608409715243" duration="1991000" />
-      <workItem from="1608411735153" duration="3756000" />
+      <workItem from="1608411735153" duration="4358000" />
+      <workItem from="1608567518572" duration="11001000" />
+      <workItem from="1608578636403" duration="5138000" />
     </task>
     <task id="LOCAL-00001" summary="Version 2.01">
       <created>1605913059124</created>
@@ -115,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606137569907</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Version 3.01">
+      <created>1608415545698</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608415545698</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +153,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Version 2.01" />
     <MESSAGE value="Version 2.02" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 2.02" />
+    <MESSAGE value="Version 3.01" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 3.01" />
   </component>
   <component name="WindowStateProjectService">
     <state x="336" y="361" key="#SQL_Dialects" timestamp="1605709455328">
@@ -151,14 +169,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="582" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605897802410" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605735883155">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608574167484">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605735883155" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605710890215">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608574167484" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1608574131990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605710890215" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608574131990" />
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605695632178" />
     <state x="834" y="418" width="562" height="204" key="Github.ShareDialog" timestamp="1605911131702">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -168,19 +186,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="682" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605911153902" />
-    <state x="724" y="243" key="NewPhpClassDialog" timestamp="1605909736331">
+    <state x="724" y="243" key="NewPhpClassDialog" timestamp="1608583821358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="724" y="243" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605909736331" />
-    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog" timestamp="1608409755094">
+    <state x="724" y="243" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608583821358" />
+    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog" timestamp="1608583811940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608409755094" />
+    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608583811940" />
     <state x="2714" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605695572122" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606137577032">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608415550333">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606137577032" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608415550333" />
     <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1605708507188">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -189,10 +207,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="850" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605708839075" />
-    <state x="818" y="258" width="801" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605782089989">
+    <state x="756" y="340" width="408" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1608580047463">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="818" y="258" width="801" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605782089989" />
+    <state x="756" y="340" width="408" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608580047463" />
+    <state x="583" y="236" width="801" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1608581594845">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="583" y="236" width="801" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608581594845" />
     <state x="712" y="328" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1605775080772">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -201,6 +223,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605775119123" />
+    <state x="733" y="394" width="621" height="283" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1608574136572">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="733" y="394" width="621" height="283" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608574136572" />
     <state x="781" y="291" key="refactoring.ChangeSignatureDialog" timestamp="1605898151506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

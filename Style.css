@@ -131,9 +131,27 @@
     flex-wrap: wrap;
 }
 
-.Eshop {
-    padding-top: 50px;
+
+.row h2{
+    font-weight: bold;
 }
+
+.row p{
+    font-size:15px;
+    text-align: justify;
+    font-weight: bold;
+
+
+
+
+}
+.row{
+    color:black;
+}
+
+
+
+
 
 
 .gallery >div {

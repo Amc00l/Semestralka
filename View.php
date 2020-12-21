@@ -5,6 +5,7 @@ class View
 {
     public function __construct()
     {
+
     }
 
     public function headerRequimenets() { ?>
@@ -54,12 +55,17 @@ class View
 
                 <form class="form-inline my-2 my-lg-0">
                     <ul class="navbar-nav mr-auto">
-                        <li class ="nav-item active ">
-                            <a class="nav-link" href="Account.php"><i class="fas fa-user"></i>  Účet</a>
 
-                        </li>
                         <li class ="nav-item active">
                             <a class="nav-link" href="Logout.php"><i class="fas fa-sign-out-alt" ></i> Logout</a>
+                        </li>
+
+                        <li class ="nav-item active ">
+                            <a class="nav-link" href="Login.php"><i class="fas fa-sign-in-alt" ></i> Login</a>
+                        </li>
+
+                        <li class ="nav-item active ">
+                            <a class="nav-link" href="Cart.php"><i class="fas fa-shopping-cart"></i></a>
                         </li>
                     </ul>
                 </form>
@@ -110,12 +116,17 @@ class View
 
                 <form class="form-inline my-2 my-lg-0">
                     <ul class="navbar-nav mr-auto">
+
                         <li class ="nav-item active ">
                             <a class="nav-link" href="Login.php"><i class="fas fa-sign-in-alt" ></i> Login</a>
                         </li>
                         <li class ="nav-item active">
                             <a class="nav-link" href="Registration.php"><i class="far fa-registered" ></i>  Registrácia</a>
                         </li>
+                        <li class ="nav-item active ">
+                            <a class="nav-link" href="Cart.php"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+
                     </ul>
                 </form>
 

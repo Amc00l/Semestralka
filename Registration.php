@@ -68,12 +68,7 @@
                 </div>
                 <p>Máte už účet? <a href="Login.php">Prihlasiť</a> </p>
                 <?php
-
-
                       $view->errors($_SESSION['array']);
-
-
-
                 ?>
 
             </form>
