@@ -1085,32 +1085,32 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="344" parent="336" name="numberPart">
+    <column id="344" parent="336" name="partName">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="345" parent="336" name="partName">
-      <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="346" parent="336" name="idModel">
-      <Position>4</Position>
+    <column id="345" parent="336" name="idModel">
+      <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="347" parent="336" name="locationImage">
-      <Position>5</Position>
+    <column id="346" parent="336" name="locationImage">
+      <Position>4</Position>
       <DataType>varchar(200)|0s</DataType>
     </column>
-    <column id="348" parent="336" name="price">
-      <Position>6</Position>
+    <column id="347" parent="336" name="price">
+      <Position>5</Position>
       <DataType>double|0s</DataType>
     </column>
-    <column id="349" parent="336" name="text">
-      <Position>7</Position>
+    <column id="348" parent="336" name="text">
+      <Position>6</Position>
       <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="349" parent="336" name="page">
+      <Position>7</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
     <index id="350" parent="336" name="listparts_idPart_uindex">
       <ColNames>idPart</ColNames>
