@@ -57,11 +57,12 @@
             <div class="descSX250">KTM SXF 250</div>
         </div>
 
-        <div class="model300">
+        <div class="model300" id="300">
             <a href="Shop.php?type=300">
                 <img src="Pictures/ktm%20300exc.png" alt="EXC300cc"  width="380" height="280">
             </a>
             <div class="desc300">KTM EXC 300</div>
+
         </div>
 
         <div class="model350">
