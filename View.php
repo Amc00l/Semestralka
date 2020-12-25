@@ -1,8 +1,9 @@
 <?php
-
+require_once "Item.php";
 
 class View
 {
+    private $cartItems;
     public function __construct()
     {
 
@@ -124,7 +125,10 @@ class View
                             <a class="nav-link" href="Registration.php"><i class="far fa-registered" ></i>  Registrácia</a>
                         </li>
                         <li class ="nav-item active ">
-                            <a class="nav-link" href="Cart.php"><i class="fas fa-shopping-cart"></i></a>
+                            <a class="nav-link" href="Cart.php">
+                            <span><i class="fas fa-shopping-cart"></i></span>
+                            <span class="badge"></span>
+                            </a>
                         </li>
 
                     </ul>
@@ -138,12 +142,36 @@ class View
 
     }
 
-    public function destroySesion() {
 
+    public function showCartItem()  {
+        if(isset($_SESSION["shoppingCart"])) {
+            foreach($_SESSION["shoppingCart"] as $item) {
+                ?>
+                <tr>
+                    <th scope="row"><?php echo $item->getModel();?></th>
+                    <td><?php echo $item->getName();?></td>
+                    <td><?php echo $item->getPrice();?></td>
+                    <td><?php echo $item->getQuantity();?></td>
+                    <td><?php echo $item->getTotal();?></td>
+                    <td><input type="button" name="remove_from_cart" id="button<?php echo $item->getId();?>" class="btn btn-dark form-control remove_from_cart" value="Odstrániť" /></td>
+                </tr>
+                <?php
+
+            }
+
+        } else { ?>
+
+            <td colspan="6">Košík je prázdny</td>
+             <?php
+        }
+
+
+    }
+
+    public function destroySesion() {
         session_unset();
         session_destroy();
-        $_SESSION['login'] = false;
-        header('Location: Login.php');
+
 
     }
 

@@ -1112,104 +1112,109 @@
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="350" parent="336" name="listparts_idPart_uindex">
+    <column id="350" parent="336" name="partNumber">
+      <Position>8</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="351" parent="336" name="listparts_idPart_uindex">
       <ColNames>idPart</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="351" parent="336" name="listparts_model_idModel_fk">
+    <index id="352" parent="336" name="listparts_model_idModel_fk">
       <ColNames>idModel</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="352" parent="336" name="PRIMARY">
+    <key id="353" parent="336" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idPart</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="353" parent="336" name="listparts_idPart_uindex">
+    <key id="354" parent="336" name="listparts_idPart_uindex">
       <ColNames>idPart</ColNames>
       <UnderlyingIndexName>listparts_idPart_uindex</UnderlyingIndexName>
     </key>
-    <foreign-key id="354" parent="336" name="listparts_model_idModel_fk">
+    <foreign-key id="355" parent="336" name="listparts_model_idModel_fk">
       <ColNames>idModel</ColNames>
       <RefTableName>model</RefTableName>
       <RefColNames>idModel</RefColNames>
     </foreign-key>
-    <column id="355" parent="337" name="idModel">
+    <column id="356" parent="337" name="idModel">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="356" parent="337" name="nameModel">
+    <column id="357" parent="337" name="nameModel">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="357" parent="337" name="Model_id_uindex">
+    <index id="358" parent="337" name="Model_id_uindex">
       <ColNames>idModel</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="358" parent="337" name="Model_nameModel_uindex">
+    <index id="359" parent="337" name="Model_nameModel_uindex">
       <ColNames>nameModel</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="359" parent="337" name="PRIMARY">
+    <key id="360" parent="337" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idModel</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="360" parent="337" name="Model_id_uindex">
+    <key id="361" parent="337" name="Model_id_uindex">
       <ColNames>idModel</ColNames>
       <UnderlyingIndexName>Model_id_uindex</UnderlyingIndexName>
     </key>
-    <key id="361" parent="337" name="Model_nameModel_uindex">
+    <key id="362" parent="337" name="Model_nameModel_uindex">
       <ColNames>nameModel</ColNames>
       <UnderlyingIndexName>Model_nameModel_uindex</UnderlyingIndexName>
     </key>
-    <column id="362" parent="338" name="id">
+    <column id="363" parent="338" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="363" parent="338" name="username">
+    <column id="364" parent="338" name="username">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="364" parent="338" name="password">
+    <column id="365" parent="338" name="password">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="365" parent="338" name="name">
+    <column id="366" parent="338" name="name">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="366" parent="338" name="surname">
+    <column id="367" parent="338" name="surname">
       <Position>5</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="367" parent="338" name="email">
+    <column id="368" parent="338" name="email">
       <Position>6</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="368" parent="338" name="users_username_uindex">
+    <index id="369" parent="338" name="users_username_uindex">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="369" parent="338" name="PRIMARY">
+    <key id="370" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="370" parent="338" name="users_username_uindex">
+    <key id="371" parent="338" name="users_username_uindex">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>users_username_uindex</UnderlyingIndexName>
     </key>
