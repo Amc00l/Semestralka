@@ -36,7 +36,7 @@ $counter = 1;
         <div class="Text">
             <h1>Košík</h1>
             <div class="Table table-responsive">
-                <table id=table class="table table-bordered table-dark">
+                <table class="table table-bordered table-dark">
                     <thead>
                     <tr>
                         <th scope="col">Typ motocykla</th>
@@ -47,11 +47,10 @@ $counter = 1;
                         <th scope="col">Odstraniť</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="table">
                     <tr>
-                        <?php //$view->destroySesion();
-                              $view->showCartItem();
-
+                        <?php
+                        $view->showCartItem();
                         ?>
                     </tr>
 
@@ -71,7 +70,6 @@ $counter = 1;
         $(document).ready(function() {
 
             $(document).on('click', '.removeAll', function () {
-
                 $.ajax({
                     url: "Destroy.php",
                     method:"POST",
@@ -86,13 +84,11 @@ $counter = 1;
             });
 
             $(document).on('click', '.remove_from_cart', function () {
-                var id = 2;//$(this);
-
+                var id = $(this).attr("id");
                 $.ajax({
                     url: "DestroyItem.php",
                     method: "POST",
                     data: {id: id},
-
                     success: function (data) {
                         alert("Produkt odstránený z košíka")
                         $('#table').html(data);
@@ -103,14 +99,6 @@ $counter = 1;
 
 
         });
-
-
-
-
-
-
-
-
 
     </script>
 

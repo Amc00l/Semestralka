@@ -39,88 +39,42 @@ $view = new View();
 
     <div class="Obsah">
         <div class="Text">
-
             <h1>Položky</h1>
-
             <div class="text-center">
-                <div class="row" id="NextPage">
-
+                <div class="row" id="Items">
                     <script>
                         loadPage(1);
-
                         function loadPage(page) {
                             var model  = <?php echo $_GET['type'];?>;
-
                             $.ajax({
                                 url:"ServerEshop.php",
                                 method:"POST",
                                 data:{model: model, page: page},
                                 success:function(data)
                                 {
-                                    $('#NextPage').html(data);
+                                    $('#Items').html(data);
                                 }
-
                             })
-
                         }
-
-
-                        /*
-                        showPage(1);
-                        function showPage(number) {
-                            var xmlhttp = new XMLHttpRequest();
-                            var model = <?php //echo $_GET['type'];?>;
-                            xmlhttp.onreadystatechange = function () {
-                                if (this.readyState == 4 && this.status == 200) {
-                                    console.log(this.responseText);
-                                    document.getElementById("NextPage").innerHTML = this.responseText;
-                                }
-                            };
-                            xmlhttp.open("GET", "ServerEshop.php?page=" + number + "&model=" + model, true);
-                            xmlhttp.send()
-                        }
-*/
                     </script>
-
-
-
                 </div>
-                <button type="button" class="btn btn-dark" value="1"  onclick="loadPage(this.value)">1</button>
-                <button type="button" class="btn btn-dark" value="2" onclick="loadPage(this.value)">2</button>
-                <button type="button" class="btn btn-dark" value="3" onclick="loadPage(this.value)">3</button>
-
-
-            </div>
-
-
 
 
 
 
             </div>
-
-
-
-
-
         </div>
-
-
-
 
 
 
     </div>
 
 
-
-
-
     <script>
 
     $(document).ready(function() {
         $(document).on('click', '.add_item_to_cart', function () {
-            var id = 4;//$(this);
+            var id = $(this).attr("id");
             var model  = <?php echo $_GET['type'];?>;
             var partName = $('#partName' + id + '').val();
             var quantity = $('#quantity' + id + '' ).val();
@@ -131,7 +85,7 @@ $view = new View();
                     method:"POST",
                     data:{id: id, model:model, partName: partName, quantity: quantity, partPrice:partPrice},
 
-                    success:function(data)
+                    success:function()
                     {
                         alert("Produkt pridaný do košínka")
                     }

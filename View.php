@@ -66,7 +66,9 @@ class View
                         </li>
 
                         <li class ="nav-item active ">
-                            <a class="nav-link" href="Cart.php"><i class="fas fa-shopping-cart"></i></a>
+                            <a class="nav-link" href="Cart.php">
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </a>
                         </li>
                     </ul>
                 </form>
@@ -127,7 +129,6 @@ class View
                         <li class ="nav-item active ">
                             <a class="nav-link" href="Cart.php">
                             <span><i class="fas fa-shopping-cart"></i></span>
-                            <span class="badge"></span>
                             </a>
                         </li>
 
@@ -139,6 +140,53 @@ class View
         </nav>
 
         <?php
+
+    }
+    public function showItems($from, $to, $result) {
+        $itemOnPage = 0;
+        $buttons = ceil($result->num_rows / 6);
+        if ($result->num_rows > 0) {
+
+            while($itemOnPage < 6) {
+                $row = $result->fetch_assoc();
+                ?>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="<?php echo$row["image"]?>">
+                        <div class="card-body">
+                            <h2 class="card-title"><?php echo $row["part"];?> <br> <?php echo $row["nameModel"];?> </h2>
+                            <h4>Cena: <?php echo $row["price"];?>€</h4>
+                            <p class="card-text"><?php echo $row["text"];?></p>
+                            <input type="hidden" id="partId<?php echo $row["idPart"];?>" name="partId<?php echo $row["idPart"];?>" value="<?php echo $row["idPart"];?>" />
+                            <input type="hidden" id="partPrice<?php echo $row["idPart"];?>" name="partPrice<?php echo $row["idPart"];?>" value="<?php echo $row["price"];?>" />
+                            <input type="hidden" id="partName<?php echo $row["idPart"];?>" name="partName<?php echo $row["idPart"];?>" value="<?php echo $row["part"];?>" />
+                            <input type="text"  id="quantity<?php echo $row["idPart"];?>" name="quantity<?php echo $row["idPart"];?>"  class="form-control" value="1" />
+                            <input type="button" name="add_item_to_cart" id="<?php echo $row["idPart"];?>" class="btn btn-dark form-control add_item_to_cart" value="Pridať do košíka" />
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <?php
+
+
+                $itemOnPage++;
+
+            }
+            for($i = 0; $i < $buttons; $i++) {
+                $val = $i+1;
+                ?>
+                <button type="button" class="btn btn-dark" value="<?php echo $val ?>"  onclick="loadPage(this.value)"><?php echo $val ?></button>
+
+                <?php
+
+            }
+        }
+
+
+
 
     }
 
@@ -155,22 +203,30 @@ class View
                     <td><?php echo $item->getPrice();?></td>
                     <td><?php echo $item->getQuantity();?></td>
                     <td><?php echo $item->totalPrice();?></td>
-                    <td><input type="button" name="remove_from_cart" id="button<?php echo $item->getId();?>" class="btn btn-warning form-control remove_from_cart" value="Odstrániť" /></td>
+                    <td><input type="button" name="remove_from_cart" id="<?php echo $item->getId();?>" class="btn btn-warning form-control remove_from_cart" value="Odstrániť" /></td>
                 </tr>
                 <?php
+            }
 
-            } ?>
-            <td colspan="4">Celková suma</td>
-            <td><?php echo $totalPrice;?></td>
-            <td><input type="button" name="removeAll" id="removeAll" class="btn btn-danger form-control removeAll" value="Vyprázdniť košík" /></td>
-            <?php
+            if(count($_SESSION["shoppingCart"]) > 0){
+                ?>
+                <td colspan="4">Celková suma</td>
+                <td><?php echo $totalPrice;?></td>
+                <td><input type="button" name="removeAll" id="removeAll" class="btn btn-danger form-control removeAll" value="Vyprázdniť košík" /></td>
+                <?php
+            } else {?>
+                <td colspan="6">Košík je prázdny</td>
+                <?php
+            }
+
         } else { ?>
             <td colspan="6">Košík je prázdny</td>
              <?php
         }
 
-
     }
+
+
 
     public function removeFromCart($id) {
 
@@ -183,7 +239,6 @@ class View
         }
 
     }
-
     public function destroySesion() {
         if (isset($_SESSION["shoppingCart"])){
             session_unset();
@@ -194,8 +249,6 @@ class View
 
 
     }
-
-
 
     public function errors($param) {
          if($param) {

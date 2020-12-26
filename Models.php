@@ -32,55 +32,56 @@
         }
 
     ?>
+    <div class="Galler">
+        <div class="gallery">
 
-    <div class="gallery">
+            <div class="model65">
+                <a href="Shop.php?type=65">
+                    <img src="Pictures/sx65.png" alt="SX65cc" width="380" height="280">
+                </a>
+                <div class="desc65">KTM SX 65</div>
 
-        <div class="model65">
-            <a href="Shop.php?type=65">
-                <img src="Pictures/sx65.png" alt="SX65cc" width="380" height="280">
-            </a>
-            <div class="desc65">KTM SX 65</div>
+            </div>
+
+            <div class="model125">
+                <a href="Shop.php?type=125">
+                    <img src="Pictures/model125.png" alt="SX125cc" width="380" height="280">
+                </a>
+                <div class="desSX125">KTM SX 125</div>
+            </div>
+
+            <div class="model250">
+                <a href="Shop.php?type=250">
+                    <img src="Pictures/ktmsxf250.png" alt="SXf250cc" width="380" height="280">
+                </a>
+                <div class="descSX250">KTM SXF 250</div>
+            </div>
+
+            <div class="model300" id="300">
+                <a href="Shop.php?type=300">
+                    <img src="Pictures/ktm%20300exc.png" alt="EXC300cc"  width="380" height="280">
+                </a>
+                <div class="desc300">KTM EXC 300</div>
+
+            </div>
+
+            <div class="model350">
+                <a href="Shop.php?type=350">
+                    <img src="Pictures/SXF350.png" alt="SXf350cc" width="380" height="280">
+                </a>
+                <div class="dex350">KTM SXF 350</div>
+
+            </div>
+
+            <div class="model450">
+                <a href="Shop.php?type=450">
+                    <img src="Pictures/SXF450.png" alt="SXf450cc" width="380" height="280">
+                </a>
+                <div class="dex450">KTM SXF 450</div>
+
+            </div>
 
         </div>
-
-        <div class="model125">
-            <a href="Shop.php?type=125">
-                <img src="Pictures/model125.png" alt="SX125cc" width="380" height="280">
-            </a>
-            <div class="desSX125">KTM SX 125</div>
-        </div>
-
-        <div class="model250">
-            <a href="Shop.php?type=250">
-                <img src="Pictures/ktmsxf250.png" alt="SXf250cc" width="380" height="280">
-            </a>
-            <div class="descSX250">KTM SXF 250</div>
-        </div>
-
-        <div class="model300" id="300">
-            <a href="Shop.php?type=300">
-                <img src="Pictures/ktm%20300exc.png" alt="EXC300cc"  width="380" height="280">
-            </a>
-            <div class="desc300">KTM EXC 300</div>
-
-        </div>
-
-        <div class="model350">
-            <a href="Shop.php?type=350">
-                <img src="Pictures/SXF350.png" alt="SXf350cc" width="380" height="280">
-            </a>
-            <div class="dex350">KTM SXF 350</div>
-
-        </div>
-
-        <div class="model450">
-            <a href="Shop.php?type=450">
-                <img src="Pictures/SXF450.png" alt="SXf450cc" width="380" height="280">
-            </a>
-            <div class="dex450">KTM SXF 450</div>
-
-        </div>
-
     </div>
 
     <div class="Pata">

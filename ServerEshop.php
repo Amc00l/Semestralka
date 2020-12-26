@@ -1,14 +1,16 @@
 <?php
     require "MySqlDatabase.php";
-
-
     $mySql = new MySqlDatabase();
     $paPage =intval($_POST['page']);
     $paIdModel = intval($_POST['model']);
-    $result = $mySql->SelectFromDatabaseForEshop($paIdModel,$paPage);
+    $result = $mySql->SelectFromDatabaseForEshop($paIdModel);
 
+    $itemOnPage = 0;
+    $buttons = ceil($result->num_rows / 6);
     if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
+
+        while($itemOnPage < 6) {
+            $row = $result->fetch_assoc();
             ?>
 
             <div class="col-lg-4 mb-4">
@@ -22,20 +24,32 @@
                         <input type="hidden" id="partPrice<?php echo $row["idPart"];?>" name="partPrice<?php echo $row["idPart"];?>" value="<?php echo $row["price"];?>" />
                         <input type="hidden" id="partName<?php echo $row["idPart"];?>" name="partName<?php echo $row["idPart"];?>" value="<?php echo $row["part"];?>" />
                         <input type="text"  id="quantity<?php echo $row["idPart"];?>" name="quantity<?php echo $row["idPart"];?>"  class="form-control" value="1" />
-                        <input type="button" name="add_item_to_cart" id="button<?php echo $row["idPart"];?>" class="btn btn-dark form-control add_item_to_cart" value="Pridať do košíka" />
+                        <input type="button" name="add_item_to_cart" id="<?php echo $row["idPart"];?>" class="btn btn-dark form-control add_item_to_cart" value="Pridať do košíka" />
                     </div>
 
 
                 </div>
             </div>
 
+            <?php
 
-        <?php  }
 
+            $itemOnPage++;
+
+        }
+        for($i = 0; $i < $buttons; $i++) {
+            $val = $i+1; ?>
+
+            <button type="button" class="btn btn-dark justify-content-center" value="<?php echo $val ?>"  onclick="loadPage(this.value)"><?php echo $val ?></button>
+
+            <?php
+
+        }
+    }
 
     $mySql->Close();
 
-    }
+
 ?>
 
 
