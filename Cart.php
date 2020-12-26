@@ -36,7 +36,7 @@ $counter = 1;
         <div class="Text">
             <h1>Košík</h1>
             <div class="Table table-responsive">
-                <table class="table table-bordered table-dark">
+                <table id=table class="table table-bordered table-dark">
                     <thead>
                     <tr>
                         <th scope="col">Typ motocykla</th>
@@ -49,7 +49,10 @@ $counter = 1;
                     </thead>
                     <tbody>
                     <tr>
-                        <?php $view->showCartItem();?>
+                        <?php //$view->destroySesion();
+                              $view->showCartItem();
+
+                        ?>
                     </tr>
 
                     </tbody>
@@ -57,45 +60,59 @@ $counter = 1;
 
             </div>
 
-            <script>
-                $(document).ready(function() {
-                    $(document).on('click', '.add_item_to_cart', function () {
-                        var id = 2//$(this);
-                        console.log(id);
-                        var model  = <?php echo $_GET['type'];?>;
-                        var partName = $('#partName' + id + '').val();
-                        var quantity = $('#quantity' + id + '' ).val();
-                        var partPrice = $('#partPrice' + id + '').val();
-                        if(quantity > 0 ) {
-                            $.ajax({
-                                url:"ServerCart.php",
-                                method:"POST",
-                                data:{id: id, model:model, partName: partName, quantity: quantity, partPrice:partPrice},
-
-                                success:function(data)
-                                {
-                                    alert("Produkt pridaný do košínka")
-                                }
-                            })
-
-                        } else {
-                            alert("Zle zadaná kapacita")
-                        }
-                    });
-                });
-
-
-            </script>
-
-
-
 
         </div>
 
 
     </div>
 
+    <script>
 
+        $(document).ready(function() {
+
+            $(document).on('click', '.removeAll', function () {
+
+                $.ajax({
+                    url: "Destroy.php",
+                    method:"POST",
+                    success:function(data)
+                    {
+                        alert("Košík vyprázdnený");
+                        $('#table').html(data);
+
+
+                    }
+                })
+            });
+
+            $(document).on('click', '.remove_from_cart', function () {
+                var id = 2;//$(this);
+
+                $.ajax({
+                    url: "DestroyItem.php",
+                    method: "POST",
+                    data: {id: id},
+
+                    success: function (data) {
+                        alert("Produkt odstránený z košíka")
+                        $('#table').html(data);
+
+                    }
+                })
+            });
+
+
+        });
+
+
+
+
+
+
+
+
+
+    </script>
 
 
 

@@ -145,22 +145,26 @@ class View
 
     public function showCartItem()  {
         if(isset($_SESSION["shoppingCart"])) {
+            $totalPrice=0.0;
             foreach($_SESSION["shoppingCart"] as $item) {
+                $totalPrice += $item->totalPrice();
                 ?>
                 <tr>
                     <th scope="row"><?php echo $item->getModel();?></th>
                     <td><?php echo $item->getName();?></td>
                     <td><?php echo $item->getPrice();?></td>
                     <td><?php echo $item->getQuantity();?></td>
-                    <td><?php echo $item->getTotal();?></td>
-                    <td><input type="button" name="remove_from_cart" id="button<?php echo $item->getId();?>" class="btn btn-dark form-control remove_from_cart" value="Odstrániť" /></td>
+                    <td><?php echo $item->totalPrice();?></td>
+                    <td><input type="button" name="remove_from_cart" id="button<?php echo $item->getId();?>" class="btn btn-warning form-control remove_from_cart" value="Odstrániť" /></td>
                 </tr>
                 <?php
 
-            }
-
+            } ?>
+            <td colspan="4">Celková suma</td>
+            <td><?php echo $totalPrice;?></td>
+            <td><input type="button" name="removeAll" id="removeAll" class="btn btn-danger form-control removeAll" value="Vyprázdniť košík" /></td>
+            <?php
         } else { ?>
-
             <td colspan="6">Košík je prázdny</td>
              <?php
         }
@@ -168,9 +172,25 @@ class View
 
     }
 
+    public function removeFromCart($id) {
+
+        if(isset($_SESSION["shoppingCart"])) {
+            foreach($_SESSION["shoppingCart"] as $key => $item) {
+                if($item->getId() == $id) {
+                    unset($_SESSION["shoppingCart"][$key]);
+                }
+            }
+        }
+
+    }
+
     public function destroySesion() {
-        session_unset();
-        session_destroy();
+        if (isset($_SESSION["shoppingCart"])){
+            session_unset();
+            session_destroy();
+
+        }
+
 
 
     }

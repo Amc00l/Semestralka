@@ -7,6 +7,7 @@ require "View.php";
 $view = new View();
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -119,8 +120,7 @@ $view = new View();
 
     $(document).ready(function() {
         $(document).on('click', '.add_item_to_cart', function () {
-            var id = 2//$(this);
-            console.log(id);
+            var id = 4;//$(this);
             var model  = <?php echo $_GET['type'];?>;
             var partName = $('#partName' + id + '').val();
             var quantity = $('#quantity' + id + '' ).val();
