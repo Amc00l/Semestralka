@@ -24,12 +24,8 @@ include("Server.php");
 
     <?php
 
-        if(isset($_SESSION['login'])) {
-            $view->navbarLoggedInUser();
-        } else {
+    $view->showNavbar();
 
-            $view->navbarLoggedOutUser();
-        }
 
     ?>
 
@@ -39,36 +35,32 @@ include("Server.php");
     <div class="Obsah">
         <div class="Format">
             <h1>Prihlasenie</h1>
-            <form action="Login.php" method="post">
+
+            <form method="post" onsubmit="login();return false;">
                 <label>Prihlasovacie meno</label>
                 <div class="form-group">
-                    <input type="text" name="username" class="form-control" placeholder="LoginID" >
+                    <input type="text" id="username" name="username" class="form-control" placeholder="LoginID">
                 </div>
 
                 <label>Heslo</label>
                 <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Password">
-
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password">
                 </div>
-
-                <div class="form-group">
-                    <input type="submit" name="Prihlásiť" class="btn btn-dark" value="Prihlásiť">
-                </div>
-
-                <?php
-
-                $view->errors($_SESSION['array']);
-
-                 ?>
-
+                    <input type="submit"  id="Prihlasit" name="Prihlásiť" class="btn btn-dark" value="Prihlásiť" ">
 
             </form>
+                <div id="error">
 
 
+
+                </div>
 
         </div>
 
     </div>
+
+
+
 
 
 
@@ -80,6 +72,33 @@ include("Server.php");
 
 </div>
 
+<script>
+           function login() {
+                var usr = $('#username').val();
+                var pass = $('#password').val();
+                var clickedLogin = "Prihlasit";
+                $.ajax({
+                    url:"Server.php",
+                    method:"POST",
+                    data:{username: usr, password: pass, clickedLogin: clickedLogin},
+                    success:function(data)
+                    {
+                        if(data === "ok") {
+                            alert("Úspešne prihlásený");
+                            window.location.href="Account.php";
+                        } else {
+                            $('#error').html(data);
+                        }
+
+                    }
+                });
+
+
+            }
+
+
+
+</script>
 
 </body>
 

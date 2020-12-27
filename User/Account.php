@@ -30,12 +30,8 @@
     <div class="BackGround">
 
         <?php
-            if(isset($_SESSION['login'])) {
-                $view->navbarLoggedInUser();
+        $view->showNavbar();
 
-            } else {
-                $view->navbarLoggedOutUser();
-            }
 
         ?>
 
@@ -66,7 +62,7 @@
 
                         <div class="form-group">
                             <div class="userInfo">
-                                <input type="submit" name="Delete" class="btn btn-dark" value="Zmazať účet">
+                                <input type="submit" name="Delete" class="btn btn-dark" value="Zmazať účet" onclick="alert('Účet zmazaný');">
                             </div>
                         </div>
 

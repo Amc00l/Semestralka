@@ -23,14 +23,7 @@ include("../User/Server.php");
 <div class="BackGround">
 
     <?php
-
-        if(isset($_SESSION['login'])) {
-            $view->navbarLoggedInUser();
-        } else {
-
-            $view->navbarLoggedOutUser();
-        }
-
+        $view->showNavbar();
     ?>
 
     <div class="Obsah">

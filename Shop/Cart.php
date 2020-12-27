@@ -2,7 +2,6 @@
 require_once "../View/View.php";
 $view= new View();
 include("../User/Server.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +13,8 @@ include("../User/Server.php");
 
     ?>
 
+
+
 </head>
 
 <body>
@@ -23,12 +24,8 @@ include("../User/Server.php");
 
     <?php
 
-    if(isset($_SESSION['login'])) {
-        $view->navbarLoggedInUser();
-    } else {
+    $view->showNavbar();
 
-        $view->navbarLoggedOutUser();
-    }
     ?>
 
     <div class="Obsah">
@@ -49,7 +46,9 @@ include("../User/Server.php");
                     <tbody id="table">
                     <tr>
                         <?php
-                        $view->showCartItem();
+
+                            $view->showCartItem();
+
                         ?>
                     </tr>
 

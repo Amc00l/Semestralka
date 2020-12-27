@@ -25,55 +25,54 @@ include("Server.php");
 
     <?php
 
-        if(isset($_SESSION['login'])) {
-            $view->navbarLoggedInUser();
-        } else {
+    $view->showNavbar();
 
-            $view->navbarLoggedOutUser();
-        }
 
     ?>
 
     <div class="Obsah">
         <div class="Format">
             <h1>Registrácia</h1>
-            <form action="Registration.php" method="post"
+            <form action="Registration.php" method="post" onsubmit="register(); return false;">
                 <label> Prihlasovacie meno</label>
 
                 <div class="form-group">
-                    <input type="text" name="username" class="form-control" placeholder="LoginID" >
+                    <input type="text" name="username" id="username" class="form-control" placeholder="LoginID" >
                 </div>
 
                 <label>Heslo</label>
                 <div class="form-group">
-                    <input type="password" name="password" v class="form-control" placeholder="Password" >
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" >
 
                 </div>
 
                 <label>Meno</label>
                 <div class="form-group">
-                    <input type="text" name="name" class="form-control" placeholder="Name"  >
+                    <input type="text" name="name"  id="name" class="form-control" placeholder="Name"  >
                 </div>
 
                 <label>Priezvisko</label>
                 <div class="form-group">
-                    <input type="text" name="surname" class="form-control" placeholder="Surname" >
+                    <input type="text" name="surname" id="surname" class="form-control" placeholder="Surname" >
                 </div>
 
                 <label>Email</label>
                 <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Email" >
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email" >
                 </div>
 
                 <div class="form-group">
-                    <input type="submit"  name="Registrovať" class="btn btn-dark" value="Registrovať">
+                    <input type="submit"  name="Registrovat" id="Registrovat" class="btn btn-dark" value="Registrovať">
                 </div>
                 <p>Máte už účet? <a href="Login.php">Prihlasiť</a> </p>
-                <?php
-                      $view->errors($_SESSION['array']);
-                ?>
+
 
             </form>
+            <div id="error">
+
+
+
+            </div>
 
         </div>
 
@@ -84,6 +83,38 @@ include("Server.php");
 
     </footer>
 
+    <script>
+
+
+
+
+
+        function register() {
+            var usr = $('#username').val();
+            var pass = $('#password').val();
+            var name =$('#name').val();
+            var surname = $('#surname').val();
+            var email = $('#email').val();
+            var clickedRegister = "Registrovat";
+            $.ajax({
+                url:"Server.php",
+                method:"POST",
+                data:{username: usr, password: pass, name: name, surname: surname, email: email, clickedRegister: clickedRegister},
+                success:function(data)
+                {
+                    if(data === "ok") {
+                        alert("Úspešne vytvorený účet");
+                        window.location.href="Account.php";
+                    } else {
+                        $('#error').html(data);
+                    }
+
+                }
+            });
+
+
+        }
+    </script>
 
 
 

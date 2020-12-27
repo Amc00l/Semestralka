@@ -1,4 +1,5 @@
 <?php
+
     require_once "../MySqlDatabase.php";
     require_once "../View/View.php";
 
@@ -24,6 +25,7 @@
     $view->showItems($result,$itemOnPage,$startIndex,$endIndex,$indexRow);
     $view->showButtons($buttons,$paIdModel);
     $mySql->Close();
+
 
 ?>
 

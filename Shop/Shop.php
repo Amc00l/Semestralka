@@ -2,11 +2,6 @@
 require_once "../View/View.php";
 $view= new View();
 include("../User/Server.php");
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -19,27 +14,16 @@ include("../User/Server.php");
     $view->headerRequimenets();
 
     ?>
-    <script src="../js/jquery.min.js"></script>
 
 </head>
 
 <body>
 
 <div class="BackGround">
-
     <?php
-    if(isset($_SESSION['login'])) {
-        $view->navbarLoggedInUser();
-
-    } else {
-        $view->navbarLoggedOutUser();
-    }
+    $view->showNavbar();
 
     ?>
-
-
-
-
 
     <div class="Obsah">
         <div class="Text">
@@ -87,9 +71,7 @@ include("../User/Server.php");
 
                     </div>
 
-            </div>
-
-
+                </div>
 
 
 
@@ -109,7 +91,7 @@ include("../User/Server.php");
         $(document).ready(function() {
             $(document).on('click', '.add_item_to_cart', function () {
                 var id = $(this).attr("id");
-                var model  = $('#modelId' + id + '').val();
+                var mod  = $('#modelId' + id + '').val();
                 var partName = $('#partName' + id + '').val();
                 var quantity = $('#quantity' + id + '' ).val();
                 var partPrice = $('#partPrice' + id + '').val();
@@ -117,11 +99,10 @@ include("../User/Server.php");
                     $.ajax({
                         url:"ServerCart.php",
                         method:"POST",
-                        data:{id: id, model:model, partName: partName, quantity: quantity, partPrice:partPrice},
-
+                        data:{id: id, mod: mod, partName: partName, quantity: quantity, partPrice: partPrice},
                         success:function()
                         {
-                            alert("Produkt pridaný do košínka")
+                            alert("Produkt pridaný do košíka")
                         }
                     })
 

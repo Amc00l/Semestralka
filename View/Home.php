@@ -25,12 +25,8 @@ include("../User/Server.php");
 
     <?php
 
-        if(isset($_SESSION['login'])) {
-            $view->navbarLoggedInUser();
-        } else {
+    $view->showNavbar();
 
-            $view->navbarLoggedOutUser();
-        }
 
     ?>
 

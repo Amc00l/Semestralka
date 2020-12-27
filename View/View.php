@@ -1,4 +1,5 @@
 <?php
+require_once "../Shop/Item.php";
 class View
 {
     public function __construct()
@@ -14,11 +15,12 @@ class View
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
 
         <?php
     }
 
-    public function navbarLoggedInUser() { ?>
+    public function showNavbar() { ?>
         <div class="logo">
             <a href="Home.php">
                 <img src="../Pictures/ktm.jpg" alt="KtmLogo" class="Logo" width="100" height="100">
@@ -34,16 +36,16 @@ class View
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class ="nav-item active ">
-                        <a class="nav-link" href="Home.php">Domov</a>
+                        <a class="nav-link" href="../View/Home.php">Domov</a>
                     </li>
                     <li class ="nav-item active">
-                        <a class="nav-link" href="Models.php">Modely</a>
+                        <a class="nav-link" href="../View/Models.php">Modely</a>
                     </li>
                     <li class ="nav-item active">
-                        <a class="nav-link" href="AboutAs.php">O nás</a>
+                        <a class="nav-link" href="../View/AboutAs.php">O nás</a>
                     </li>
                     <li class ="nav-item active">
-                        <a class="nav-link" href="Contact.php">Kontakt</a>
+                        <a class="nav-link" href="../View/Contact.php">Kontakt</a>
                     </li>
                     <li class ="nav-item active">
                         <a class="nav-link" href="../Shop/Shop.php">Eshop</a>
@@ -52,16 +54,24 @@ class View
                 </ul>
 
                 <form class="form-inline my-2 my-lg-0">
-                    <ul class="navbar-nav mr-auto">
-
+                    <ul class="navbar-nav mr-auto"> <?php
+                        if(isset($_SESSION["login"])) { ?>
                         <li class ="nav-item active">
                             <a class="nav-link" href="../User/Logout.php"><i class="fas fa-sign-out-alt" ></i> Logout</a>
                         </li>
 
                         <li class ="nav-item active ">
+                            <a class="nav-link" href="../User/Account.php"><i class="fa fa-user" ></i> Účet</a>
+                        </li> <?php } else { ?>
+
+                        <li class ="nav-item active ">
                             <a class="nav-link" href="../User/Login.php"><i class="fas fa-sign-in-alt" ></i> Login</a>
                         </li>
-
+                        <li class ="nav-item active">
+                            <a class="nav-link" href="../User/Registration.php"><i class="far fa-registered" ></i>  Registrácia</a>
+                        </li>
+                        <li class ="nav-item active ">
+                         <?php } ?>
                         <li class ="nav-item active ">
                             <a class="nav-link" href="../Shop/Cart.php">
                                 <span><i class="fas fa-shopping-cart"></i></span>
@@ -80,65 +90,7 @@ class View
 
 
 
-    public function navbarLoggedOutUser() { ?>
-        <div class="logo">
-            <a href="Home.php">
-                <img src="../Pictures/ktm.jpg" alt="KtmLogo" class="Logo" width="100" height="100">
-            </a>
-        </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-color">
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class ="nav-item active ">
-                        <a class="nav-link" href="Home.php">Domov</a>
-                    </li>
-                    <li class ="nav-item active">
-                        <a class="nav-link" href="Models.php">Modely</a>
-                    </li>
-                    <li class ="nav-item active">
-                        <a class="nav-link" href="AboutAs.php">O nás</a>
-                    </li>
-                    <li class ="nav-item active">
-                        <a class="nav-link" href="Contact.php">Kontakt</a>
-                    </li>
-                    <li class ="nav-item active">
-                        <a class="nav-link" href="../Shop/Shop.php">Eshop</a>
-                    </li>
-
-                </ul>
-
-
-                <form class="form-inline my-2 my-lg-0">
-                    <ul class="navbar-nav mr-auto">
-
-                        <li class ="nav-item active ">
-                            <a class="nav-link" href="../User/Login.php"><i class="fas fa-sign-in-alt" ></i> Login</a>
-                        </li>
-                        <li class ="nav-item active">
-                            <a class="nav-link" href="../User/Registration.php"><i class="far fa-registered" ></i>  Registrácia</a>
-                        </li>
-                        <li class ="nav-item active ">
-                            <a class="nav-link" href="../Shop/Cart.php">
-                            <span><i class="fas fa-shopping-cart"></i></span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </form>
-
-
-            </div>
-        </nav>
-
-        <?php
-
-    }
     public function getButtons($result) {
             return ceil(($result/itemOnPage));
 
@@ -167,11 +119,8 @@ class View
                                         <input type="text"  id="quantity<?php echo $row["idPart"];?>" name="quantity<?php echo $row["idPart"];?>"  class="form-control" value="1" />
                                         <input type="button" name="add_item_to_cart" id="<?php echo $row["idPart"];?>" class="btn btn-dark form-control add_item_to_cart" value="Pridať do košíka" />
                                     </div>
-
-
                                 </div>
                             </div>
-
 
                         <?php
 
@@ -251,8 +200,7 @@ class View
     }
     public function destroySesion() {
         if (isset($_SESSION["shoppingCart"])){
-            session_unset();
-            session_destroy();
+            unset($_SESSION["shoppingCart"]);
 
         }
 
