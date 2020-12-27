@@ -75,10 +75,7 @@
 
 
 
-    <footer class="Pata">
-        <p>Copyright 2020 ©</p>
-
-    </footer>
+        <?php $view->showFooter(); ?>
 
 
 </div>

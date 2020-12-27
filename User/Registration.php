@@ -78,10 +78,8 @@ include("Server.php");
 
 
     </div>
-    <footer class="Pata">
-        <p>Copyright 2020 ©</p>
+    <?php $view->showFooter(); ?>
 
-    </footer>
 
     <script>
 

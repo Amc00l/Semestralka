@@ -19,20 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee7c6286-909b-4827-a5cb-9198e3c73bfb" name="Default Changelist" comment="Version 4.04">
-      <change afterPath="$PROJECT_DIR$/User/Controller.php" afterDir="false" />
+    <list default="true" id="ee7c6286-909b-4827-a5cb-9198e3c73bfb" name="Default Changelist" comment="Version 5.01">
+      <change afterPath="$PROJECT_DIR$/Shop/Order.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MySqlDatabase.php" beforeDir="false" afterPath="$PROJECT_DIR$/MySqlDatabase.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/Cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/ServerCart.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/ServerCart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/ServerEshop.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/ServerEshop.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop/Shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/Shop.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Account.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/ChangePass.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/ChangePass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/Registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Server.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Server.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/AboutAs.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/AboutAs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Contact.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Home.php" afterDir="false" />
@@ -139,7 +136,7 @@
       <workItem from="1609002275076" duration="25000" />
       <workItem from="1609018567640" duration="20866000" />
       <workItem from="1609068666957" duration="4768000" />
-      <workItem from="1609074549076" duration="24363000" />
+      <workItem from="1609074549076" duration="29755000" />
     </task>
     <task id="LOCAL-00001" summary="Version 2.01">
       <created>1605913059124</created>
@@ -218,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609039389829</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Version 5.01">
+      <created>1609099296532</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609099296532</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +252,8 @@
     <MESSAGE value="Version 4.02" />
     <MESSAGE value="Version 4.03" />
     <MESSAGE value="Version 4.04" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 4.04" />
+    <MESSAGE value="Version 5.01" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 5.01" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1608995041776">
@@ -290,15 +295,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="724" y="243" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609082689612" />
-    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog" timestamp="1609094436983">
+    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog" timestamp="1609102581920">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609094436983" />
+    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609102581920" />
     <state x="2714" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608815805260" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1609039391544">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1609099297601">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609039391544" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609099297601" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608950259229" />
     <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1605708507188">
       <screen x="0" y="0" width="1920" height="1040" />

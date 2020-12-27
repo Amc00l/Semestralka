@@ -51,13 +51,10 @@ class MySqlDatabase
         return $result = mysqli_query($this->connection, $sqlSelectUser);
     }
 
-
     public function SelectFromDatabaseForEshop($paIdModel){
+        $paIdModel = $this->connection->real_escape_string($paIdModel);
         $sqlSelectEshopData = "SELECT model.nameModel as nameModel, model.idModel as modelId, listparts.idPart as idPart, listparts.partNumber as numberPart, listparts.price as price, listparts.locationImage as image, listparts.partName as part, listparts.text as text FROM model join listparts WHERE model.idModel = '$paIdModel'   AND  model.idModel = listparts.idModel";
         return $this->connection->query($sqlSelectEshopData);
-
-
-
     }
 
     public function Close() {

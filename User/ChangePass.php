@@ -77,38 +77,33 @@ include("Server.php");
 
 
 
-    <footer class="Pata">
-        <p>Copyright 2020 ©</p>
+    <?php $view->showFooter(); ?>
 
-    </footer>
- <script>
-
-     function changePass() {
-         var passOld = $('#passOld').val();
-         var passNew = $('#passNew').val();
-         var passConfirm = $('#passConfirm').val();
-         var clickedChange = "Zmenit";
-         $.ajax({
-             url:"Server.php",
-             method:"POST",
-             data:{passOld: passOld, passNew: passNew, passConfirm:passConfirm, clickedChange: clickedChange},
-             success:function(data)
-             {
-                 if(data === "ok") {
-                     alert("Heslo úspešne zmenené");
-                 } else {
-                     $('#error').html(data);
-                 }
-
-             }
-         });
-
-
-     }
-
- </script>
 
 </div>
+<script>
+
+    function changePass() {
+        var passOld = $('#passOld').val();
+        var passNew = $('#passNew').val();
+        var passConfirm = $('#passConfirm').val();
+        var clickedChange = "Zmenit";
+        $.ajax({
+            url:"Server.php",
+            method:"POST",
+            data:{passOld: passOld, passNew: passNew, passConfirm:passConfirm, clickedChange: clickedChange},
+            success:function(data) {
+                if(data === "ok") {
+                    alert("Heslo úspešne zmenené");
+                    window.location.href="Account.php";
+                } else {
+                    $('#error').html(data);
+                }
+            }
+        });
+    }
+
+</script>
 
 
 </body>

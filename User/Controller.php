@@ -5,7 +5,7 @@ class Controller
 {
 
     public static function checkRegister($con,$username,$pass,$name,$surname,$email){
-        //$pass= md5($pass);
+        $pass= md5($pass);
         $view = new View();
         if (empty($username)) {
             $_SESSION["error"] = true;
@@ -65,6 +65,7 @@ class Controller
         }
 
         if(!($_SESSION["error"])) {
+            $passLogin = md5($passLogin);
             $result= $con->SelectExistUser($usernameLogin,$passLogin);
             if (mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_row($result);
@@ -88,7 +89,6 @@ class Controller
     public static function checkChange($con,$oldPass,$newPass,$conNewPas)
     {
         $view = new View();
-
         $user = $_SESSION["user"];
         if (empty($oldPass)) {
             array_push($_SESSION["array"], "Nezadali ste staré heslo.");
@@ -102,30 +102,34 @@ class Controller
             array_push($_SESSION["array"], "Nezadali ste heslo pre potvrdenie nového hesla.");
             $_SESSION["error"] = true;
         }
-        if (!($_SESSION['error'])) {
-            if ($_POST['passOld'] != $user->getPass()) {
+        if($oldPass == $newPass){
+            array_push($_SESSION["array"], "Nové heslo je identické so starým.");
+            $_SESSION["error"] = true;
+        }
+
+        if (!($_SESSION["error"])) {
+            $oldPass = md5($oldPass);
+            if ($oldPass != $user->getPass()) {
                 array_push($_SESSION["array"], "Nesprávne staré heslo.");
-                $_SESSION['error'] = true;
+                $_SESSION["error"] = true;
             }
-            if ($_POST['passNew'] != $_POST['passConfirm']) {
+            if ($newPass != $conNewPas) {
                 array_push($_SESSION["array"], "Nové heslá sa nezhodujú.");
-                $_SESSION['error'] = true;
+                $_SESSION["error"] = true;
             }
-            if (!($_SESSION['error'])) {
+            if (!($_SESSION["error"])) {
+                $newPass = md5($newPass);
                 $username = $user->getUsername();
                 $result = $con->UpdateChangePasswond($newPass, $username);
                 if ($result) {
-                    $user->setPass($_POST['passNew']);
+                    $user->setPass($newPass);
                     echo "ok";
                 }
 
             } else {
-
                 $view->errors($_SESSION["array"]);
-
             }
         } else {
-
             $view->errors($_SESSION["array"]);
         }
 
@@ -133,12 +137,10 @@ class Controller
     }
 
     public function deleteUser($con){
-        $view = new View();
         $user = $_SESSION["user"];
         $username = $user->getUsername();
         $result = $con->DeleteExistUser($username);
         if($result) {
-            array_push($_SESSION["array"],"Používateľ zmazaný");
             ?> <script> alert("Používateľ zmazaný");</script><?php
             unset($_SESSION["user"]);
             unset($_SESSION["error"]);

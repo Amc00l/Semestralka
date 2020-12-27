@@ -68,10 +68,8 @@ include("../User/Server.php");
         </div>
     </div>
 
-    <div class="Pata">
-        <p>Copyright 2020 ©</p>
+    <?php $view->showFooter(); ?>
 
-    </div>
 
 </div>
 

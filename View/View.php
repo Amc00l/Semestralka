@@ -111,7 +111,7 @@ class View
                                     <div class="card-body">
                                         <h2 class="card-title"><?php echo $row["part"];?> <br> <?php echo $row["nameModel"];?> </h2>
                                         <h4>Cena: <?php echo $row["price"];?>€</h4>
-                                        <p class="card-text"><?php echo $row["text"];?></p>
+                                        <input type="button" class="btn btn-warning control" name="show" value="Zobraz popis" onclick="alert('<?php echo $row["text"];?>');">
                                         <input type="hidden" id="partId<?php echo $row["idPart"];?>" name="partId<?php echo $row["idPart"];?>" value="<?php echo $row["idPart"];?>" />
                                         <input type="hidden" id="partPrice<?php echo $row["idPart"];?>" name="partPrice<?php echo $row["idPart"];?>" value="<?php echo $row["price"];?>" />
                                         <input type="hidden" id="modelId<?php echo $row["idPart"];?>" name="modelId<?php echo $row["idPart"];?>" value="<?php echo $row["modelId"];?>" />
@@ -183,6 +183,13 @@ class View
              <?php
         }
 
+    }
+
+    public function showFooter(){?>
+        <footer class="Pata">
+            <p>Copyright 2020 ©</p>
+        </footer>
+        <?php
     }
 
 
