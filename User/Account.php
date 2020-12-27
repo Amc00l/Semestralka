@@ -1,10 +1,12 @@
 <?php
-    include ('Server.php');
-    if(isset($_SESSION['user'])) {
-        $user = $_SESSION['user'];
+
+    require_once "../View/View.php";
+    $view= new View();
+    include("Server.php");
+    if(isset($_SESSION["user"])) {
+        $user = $_SESSION["user"];
     }
-    require "View.php";
-    $view = new View();
+
 
 
 
@@ -15,6 +17,7 @@
 
 <head>
     <title>Prihlaseny</title>
+    <link rel="stylesheet" href="../Style.css">
     <?php
         $view->headerRequimenets();
 

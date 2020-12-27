@@ -21,8 +21,9 @@ class MySqlDatabase
 
 
     public function SelectFromDatabaseForEshop($paIdModel){
-        $sqlSelectEshopData = "SELECT model.nameModel as nameModel, listparts.idPart as idPart, listparts.partNumber as numberPart, listparts.price as price, listparts.locationImage as image, listparts.partName as part, listparts.text as text FROM model join listparts WHERE model.idModel = '$paIdModel'   AND  model.idModel = listparts.idModel";
+        $sqlSelectEshopData = "SELECT model.nameModel as nameModel, model.idModel as modelId, listparts.idPart as idPart, listparts.partNumber as numberPart, listparts.price as price, listparts.locationImage as image, listparts.partName as part, listparts.text as text FROM model join listparts WHERE model.idModel = '$paIdModel'   AND  model.idModel = listparts.idModel";
         return $this->connection->query($sqlSelectEshopData);
+
 
 
     }

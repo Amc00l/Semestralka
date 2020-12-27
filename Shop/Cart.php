@@ -1,8 +1,7 @@
 <?php
-require "View.php";
-$view = new View();
-include ('Server.php');
-$counter = 1;
+require_once "../View/View.php";
+$view= new View();
+include("../User/Server.php");
 
 ?>
 

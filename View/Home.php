@@ -1,8 +1,8 @@
 <?php
 
-    require "View.php";
-    $view=new View();
-    include ('Server.php');
+require_once "../View/View.php";
+$view= new View();
+include("../User/Server.php");
 
 ?>
 
@@ -11,7 +11,7 @@
 
 <head>
     <title>Domov</title>
-   <?php
+    <?php
         $view->headerRequimenets();
 
    ?>
@@ -54,7 +54,7 @@
             </p>
             <div class="Sx125">
                 <a>
-                    <img src="Pictures/IMG_20200310_171109.jpg" alt= "MyKtm" style="width: 100%">
+                    <img src="../Pictures/IMG_20200310_171109.jpg" alt= "MyKtm" style="width: 100%">
                 </a>
                 <div class="desSX125">KTM SX 125 2002</div>
             </div>

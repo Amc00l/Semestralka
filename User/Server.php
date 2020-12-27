@@ -1,6 +1,5 @@
 <?php
-
-    require "User.php";
+    require_once "User.php";
 
     $con = mysqli_connect("localhost","root", "dtb456","persondata");
 

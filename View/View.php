@@ -1,9 +1,6 @@
 <?php
-require_once "Item.php";
-
 class View
 {
-    private $cartItems;
     public function __construct()
     {
 
@@ -11,7 +8,7 @@ class View
 
     public function headerRequimenets() { ?>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="../Style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -24,7 +21,7 @@ class View
     public function navbarLoggedInUser() { ?>
         <div class="logo">
             <a href="Home.php">
-                <img src="Pictures/ktm.jpg" alt="KtmLogo" class="Logo" width="100" height="100">
+                <img src="../Pictures/ktm.jpg" alt="KtmLogo" class="Logo" width="100" height="100">
             </a>
         </div>
 
@@ -49,7 +46,7 @@ class View
                         <a class="nav-link" href="Contact.php">Kontakt</a>
                     </li>
                     <li class ="nav-item active">
-                        <a class="nav-link" href="Models.php">Eshop</a>
+                        <a class="nav-link" href="../Shop/Shop.php">Eshop</a>
                     </li>
 
                 </ul>
@@ -58,15 +55,15 @@ class View
                     <ul class="navbar-nav mr-auto">
 
                         <li class ="nav-item active">
-                            <a class="nav-link" href="Logout.php"><i class="fas fa-sign-out-alt" ></i> Logout</a>
+                            <a class="nav-link" href="../User/Logout.php"><i class="fas fa-sign-out-alt" ></i> Logout</a>
                         </li>
 
                         <li class ="nav-item active ">
-                            <a class="nav-link" href="Login.php"><i class="fas fa-sign-in-alt" ></i> Login</a>
+                            <a class="nav-link" href="../User/Login.php"><i class="fas fa-sign-in-alt" ></i> Login</a>
                         </li>
 
                         <li class ="nav-item active ">
-                            <a class="nav-link" href="Cart.php">
+                            <a class="nav-link" href="../Shop/Cart.php">
                                 <span><i class="fas fa-shopping-cart"></i></span>
                             </a>
                         </li>
@@ -86,7 +83,7 @@ class View
     public function navbarLoggedOutUser() { ?>
         <div class="logo">
             <a href="Home.php">
-                <img src="Pictures/ktm.jpg" alt="KtmLogo" class="Logo" width="100" height="100">
+                <img src="../Pictures/ktm.jpg" alt="KtmLogo" class="Logo" width="100" height="100">
             </a>
         </div>
 
@@ -111,7 +108,7 @@ class View
                         <a class="nav-link" href="Contact.php">Kontakt</a>
                     </li>
                     <li class ="nav-item active">
-                        <a class="nav-link" href="Models.php">Eshop</a>
+                        <a class="nav-link" href="../Shop/Shop.php">Eshop</a>
                     </li>
 
                 </ul>
@@ -121,13 +118,13 @@ class View
                     <ul class="navbar-nav mr-auto">
 
                         <li class ="nav-item active ">
-                            <a class="nav-link" href="Login.php"><i class="fas fa-sign-in-alt" ></i> Login</a>
+                            <a class="nav-link" href="../User/Login.php"><i class="fas fa-sign-in-alt" ></i> Login</a>
                         </li>
                         <li class ="nav-item active">
-                            <a class="nav-link" href="Registration.php"><i class="far fa-registered" ></i>  Registrácia</a>
+                            <a class="nav-link" href="../User/Registration.php"><i class="far fa-registered" ></i>  Registrácia</a>
                         </li>
                         <li class ="nav-item active ">
-                            <a class="nav-link" href="Cart.php">
+                            <a class="nav-link" href="../Shop/Cart.php">
                             <span><i class="fas fa-shopping-cart"></i></span>
                             </a>
                         </li>
@@ -142,55 +139,68 @@ class View
         <?php
 
     }
-    public function showItems($from, $to, $result) {
-        $itemOnPage = 0;
-        $buttons = ceil($result->num_rows / 6);
-        if ($result->num_rows > 0) {
-
-            while($itemOnPage < 6) {
-                $row = $result->fetch_assoc();
-                ?>
-
-                <div class="col-lg-4 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo$row["image"]?>">
-                        <div class="card-body">
-                            <h2 class="card-title"><?php echo $row["part"];?> <br> <?php echo $row["nameModel"];?> </h2>
-                            <h4>Cena: <?php echo $row["price"];?>€</h4>
-                            <p class="card-text"><?php echo $row["text"];?></p>
-                            <input type="hidden" id="partId<?php echo $row["idPart"];?>" name="partId<?php echo $row["idPart"];?>" value="<?php echo $row["idPart"];?>" />
-                            <input type="hidden" id="partPrice<?php echo $row["idPart"];?>" name="partPrice<?php echo $row["idPart"];?>" value="<?php echo $row["price"];?>" />
-                            <input type="hidden" id="partName<?php echo $row["idPart"];?>" name="partName<?php echo $row["idPart"];?>" value="<?php echo $row["part"];?>" />
-                            <input type="text"  id="quantity<?php echo $row["idPart"];?>" name="quantity<?php echo $row["idPart"];?>"  class="form-control" value="1" />
-                            <input type="button" name="add_item_to_cart" id="<?php echo $row["idPart"];?>" class="btn btn-dark form-control add_item_to_cart" value="Pridať do košíka" />
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <?php
-
-
-                $itemOnPage++;
-
-            }
-            for($i = 0; $i < $buttons; $i++) {
-                $val = $i+1;
-                ?>
-                <button type="button" class="btn btn-dark" value="<?php echo $val ?>"  onclick="loadPage(this.value)"><?php echo $val ?></button>
-
-                <?php
-
-            }
-        }
-
-
-
+    public function getButtons($result) {
+            return ceil(($result/itemOnPage));
 
     }
 
+    public function showItems($result,$itemOnPage,$startIndex,$endIndex,$indexRow) {
 
+        if ($result->num_rows > 0) {
+            ?><div class="row"> <?php
+            while($row = $result->fetch_assoc()) {
+
+                if($itemOnPage < itemOnPage) {
+                    if($indexRow >= $startIndex && $indexRow <= $endIndex) {?>
+
+                            <div class="col-lg-4 mb-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="<?php echo$row["image"]?>">
+                                    <div class="card-body">
+                                        <h2 class="card-title"><?php echo $row["part"];?> <br> <?php echo $row["nameModel"];?> </h2>
+                                        <h4>Cena: <?php echo $row["price"];?>€</h4>
+                                        <p class="card-text"><?php echo $row["text"];?></p>
+                                        <input type="hidden" id="partId<?php echo $row["idPart"];?>" name="partId<?php echo $row["idPart"];?>" value="<?php echo $row["idPart"];?>" />
+                                        <input type="hidden" id="partPrice<?php echo $row["idPart"];?>" name="partPrice<?php echo $row["idPart"];?>" value="<?php echo $row["price"];?>" />
+                                        <input type="hidden" id="modelId<?php echo $row["idPart"];?>" name="modelId<?php echo $row["idPart"];?>" value="<?php echo $row["modelId"];?>" />
+                                        <input type="hidden" id="partName<?php echo $row["idPart"];?>" name="partName<?php echo $row["idPart"];?>" value="<?php echo $row["part"];?>" />
+                                        <input type="text"  id="quantity<?php echo $row["idPart"];?>" name="quantity<?php echo $row["idPart"];?>"  class="form-control" value="1" />
+                                        <input type="button" name="add_item_to_cart" id="<?php echo $row["idPart"];?>" class="btn btn-dark form-control add_item_to_cart" value="Pridať do košíka" />
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                        <?php
+
+                    }
+                }
+
+                if($indexRow >= $startIndex) {
+                    $itemOnPage++;
+                }
+
+                $indexRow++;
+            }
+            ?></div><?php
+
+
+
+        }
+    }
+
+
+    public function showButtons($buttons,$model) {
+
+        for($i = 0; $i < $buttons; $i++) {
+            $val = $i+1; ?>
+            <button type="button" class="btn btn-dark" value="<?php echo $val;?>"  onclick="loadPage(this.value,<?php echo $model ?>)"><?php echo $val;?></button>
+            <?php
+
+        }
+    }
     public function showCartItem()  {
         if(isset($_SESSION["shoppingCart"])) {
             $totalPrice=0.0;

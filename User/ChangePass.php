@@ -1,7 +1,7 @@
 <?php
-    include ('Server.php');
-    require('View.php');
-    $view = new View();
+require_once "../View/View.php";
+$view= new View();
+include("Server.php");
 
 
 ?>
@@ -11,6 +11,7 @@
 
 <head>
     <title>Prihlasenie</title>
+    <link rel="stylesheet" href="../Style.css">
     <?php
         $view->headerRequimenets();
 
