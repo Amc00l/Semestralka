@@ -4,10 +4,10 @@
     require_once "../View/View.php";
 
     session_start();
-    const itemOnPage = 6;
     $view = new View();
     $mySql = new MySqlDatabase();
     $paPage =intval($_POST["page"]);
+    const itemOnPage = 6;
 
     if(isset($_POST["model"])){
         $_SESSION["paModel"] = $_POST["model"];

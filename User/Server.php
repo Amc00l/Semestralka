@@ -1,7 +1,7 @@
 <?php
     require_once "User.php";
     require_once "../MySqlDatabase.php";
-    require_once "Controller.php";
+    require_once "../Controller.php";
 
     $con = new MySqlDatabase();
 
@@ -9,6 +9,11 @@
 
     $_SESSION["error"] = false;
     $_SESSION["array"] = array();
+
+    if(isset($_POST["clickedConfirm"])) {
+        Controller::checkConfirm($_POST["name"],$_POST["surname"],$_POST["address"],$_POST["address2"],$_POST["city"],$_POST["zip"],$_POST["country"],$_POST["selected"],$_POST["aggre"]);
+    }
+
     if(isset($_POST["clickedRegister"])) {
         Controller::checkRegister($con, $_POST["username"],$_POST["password"],$_POST["name"],$_POST["surname"],$_POST["email"]);
 

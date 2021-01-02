@@ -1,8 +1,128 @@
 <?php
-require_once "../User/User.php";
-require_once "../View/View.php";
+require_once "User/User.php";
+require_once "View/View.php";
 class Controller
 {
+
+    public static function addToCart($partId,$quantity,$item) {
+
+        if(!(isset($_SESSION["shoppingCart"]))) {
+            $_SESSION["shoppingCart"] = array();
+            array_push($_SESSION["shoppingCart"],$item);
+
+        } else {
+
+            $isInside = false;
+            foreach($_SESSION["shoppingCart"] as $value) {
+                if($value->getId() == $partId) {
+                    $totalQuantity = $value->getQuantity() + $quantity;
+                    $value->setQuantity($totalQuantity);
+                    $value->totalPrice();
+                    $isInside = true;
+                }
+
+            }
+
+            if($isInside == false) {
+                array_push($_SESSION["shoppingCart"],$item);
+            }
+
+
+        }
+    }
+
+    public static function checkConfirm($name, $surname, $address, $address2, $city, $zip, $country, $selected, $check) {
+        $view = new View();
+        if (empty($name)) {
+            $_SESSION["error"] = true;
+            array_push($_SESSION["array"],"Nezadali ste meno.");
+        }
+        if (empty($surname)) {
+            $_SESSION["error"]= true;
+            array_push($_SESSION["array"],"Nezadali ste priezvisko.");
+        }
+        if (empty($address)) {
+            $_SESSION["error"] = true;
+            array_push($_SESSION["array"],"Nezadali ste obec.");
+        }
+        if (empty($address2)) {
+            $_SESSION["error"] = true;
+            array_push($_SESSION["array"],"Nezadali ste ulicu.");
+        }
+        if (empty($city)) {
+            $_SESSION["error"] = true;
+            array_push($_SESSION["array"],"Nezadali ste mesto.");
+        }
+        if (empty($zip)) {
+            $_SESSION["error"] = true;
+            array_push($_SESSION["array"],"Nezadali ste psč.");
+        }
+        if (empty($country)) {
+            $_SESSION["error"] = true;
+            array_push($_SESSION["array"],"Nezadali ste štát.");
+        }
+
+        if($selected === "Vybrať...") {
+            $_SESSION["error"] = true;
+            array_push($_SESSION["array"],"Nevybrali ste dopravu.");
+        }
+
+
+
+
+        if(!($_SESSION["error"])) {
+
+            if(strlen($zip) != 5){
+                array_push($_SESSION["array"],"Zlý format PSČ.");
+            } else {
+                if($check === " ") {
+                    array_push($_SESSION["array"],"Nezačiarkli ste súhlas so spracovaním požiadaviek.");
+                } else {
+                    self::destroySessionShoppingCart();
+                    echo "ok";
+
+                }
+
+            }
+            $view->errors($_SESSION["array"],true);
+
+        } else {
+
+            $view->errors($_SESSION["array"],true);
+        }
+
+
+
+
+
+
+    }
+
+
+
+    public static function destroySessionShoppingCart() {
+        if (isset($_SESSION["shoppingCart"])){
+            unset($_SESSION["shoppingCart"]);
+        }
+    }
+
+    public static function isDestroyedShoppingCart() {
+       if(isset($_SESSION["shoppingCart"])) {
+           return false;
+       }
+       return true;
+
+    }
+    public static function removeFromCart($id) {
+        if(isset($_SESSION["shoppingCart"])) {
+            foreach($_SESSION["shoppingCart"] as $key => $item) {
+                if($item->getId() == $id) {
+                    unset($_SESSION["shoppingCart"][$key]);
+                }
+            }
+        }
+
+    }
 
     public static function checkRegister($con,$username,$pass,$name,$surname,$email){
         $pass= md5($pass);
@@ -33,7 +153,7 @@ class Controller
             $sql = $con->InsertNewUser($username,$pass,$name,$surname,$email);
             if (!(mysqli_query($con->getConnection(), $sql))) {
                 array_push($_SESSION["array"],"Takýto uživateľ už existuje");
-                $view->errors($_SESSION["array"]);
+                $view->errors($_SESSION["array"],false);
 
             } else {
                 $_SESSION["user"] = $user;
@@ -46,7 +166,7 @@ class Controller
 
         } else {
 
-            $view->errors($_SESSION["array"]);
+            $view->errors($_SESSION["array"],false);
 
 
         }
@@ -76,12 +196,12 @@ class Controller
             } else {
                 array_push($_SESSION["array"], "Používateľské meno a heslo sa nezhodujú.");
                 $_SESSION["error"] = true;
-                $view->errors($_SESSION["array"]);
+                $view->errors($_SESSION["array"],false);
             }
 
 
         } else {
-            $view->errors($_SESSION["array"]);
+            $view->errors($_SESSION["array"],false);
 
         }
     }
@@ -127,10 +247,10 @@ class Controller
                 }
 
             } else {
-                $view->errors($_SESSION["array"]);
+                $view->errors($_SESSION["array"],false);
             }
         } else {
-            $view->errors($_SESSION["array"]);
+            $view->errors($_SESSION["array"],false);
         }
 
 
@@ -148,8 +268,6 @@ class Controller
             unset($_SESSION["login"]);
             header("Location: Login.php");
         }
-
-
 
     }
 

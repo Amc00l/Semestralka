@@ -28,7 +28,7 @@ include("../User/Server.php");
     <div class="Obsah">
         <div class="Text">
             <h1>Vytvorenie objednávky</h1>
-            <form action="../View/Home.php" onsubmit="alert('Úspešne vytvorená')">
+            <form action="../View/Home.php" onsubmit="createOrder();return false;">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label>Meno</label>
@@ -55,7 +55,7 @@ include("../User/Server.php");
 
                     <div class="form-group col-md-4">
                         <label>PSČ</label>
-                        <input type="text" class="form-control" id="PSC">
+                        <input type="number" class="form-control" id="PSC" placeholder="018 16">
                     </div>
                     <div class="form-group col-md-4">
                         <label>Štát</label>
@@ -84,14 +84,57 @@ include("../User/Server.php");
                     </div>
                 </div>
                 <div class="col text-center">
-                    <button type="submit" class="btn btn-dark btn-cent">Vytvoriť</button>
+                    <input type="submit"  id="Potvrdit" name="Potvrdit" class="btn btn-dark" value="Potvrdiť">
                 </div>
             </form>
 
-
-
         </div>
+
     </div>
+
+    <script>
+        function createOrder() {
+            var name = $('#Meno').val();
+            var surname = $('#Priezvisko').val();
+            var address = $('#Obec').val();
+            var address2 = $('#Ulica').val();
+            var city = $('#Mesto').val();
+            var zip = $('#PSC').val();
+            var country = $('#Stat').val();
+            var selected = $('#inputState').val();
+            var checkBox = document.getElementById("gridCheck");
+            var aggre = " ";
+            if(checkBox.checked) {
+                aggre ="checked";
+
+            }
+
+            console.log(gridCheck);
+            var clickedConfirm = "Potvrdit";
+            $.ajax({
+                url:"../User/Server.php",
+                method:"POST",
+                data:{name: name, surname: surname, address: address, address2:address2,city: city,zip: zip,country: country,selected:selected, clickedConfirm:clickedConfirm, aggre:aggre},
+                success:function(data)
+                {
+                    if(data === "ok") {
+                        alert("Objednávka vytvorená");
+                        window.location.href="../View/Home.php";
+                    } else {
+                        alert(data);
+
+                    }
+
+                }
+            });
+
+
+        }
+
+
+
+
+    </script>
 
 
 

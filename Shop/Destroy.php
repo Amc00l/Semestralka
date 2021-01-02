@@ -1,7 +1,9 @@
 <?php
 require_once "../View/View.php";
+require_once "../Controller.php";
 session_start();
 $view = new View();
-$view->destroySesion();
+Controller::destroySessionShoppingCart();
 $view->showCartItem();
+
 

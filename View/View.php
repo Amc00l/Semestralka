@@ -88,9 +88,6 @@ class View
 
     }
 
-
-
-
     public function getButtons($result) {
             return ceil(($result/itemOnPage));
 
@@ -141,6 +138,7 @@ class View
     }
 
 
+
     public function showButtons($buttons,$model) {
 
         for($i = 0; $i < $buttons; $i++) {
@@ -180,9 +178,14 @@ class View
 
         } else { ?>
             <td colspan="6">Košík je prázdny</td>
+
              <?php
         }
 
+    }
+
+    public function showCreateButton() {?>
+        <input type="button" name="createOrder" id="createOrder" class="btn btn-success createOrder" value="Vytvoriť objednávku" onclick="window.location.href='Order.php'"/><?php
     }
 
     public function showFooter(){?>
@@ -192,35 +195,23 @@ class View
         <?php
     }
 
-
-
-    public function removeFromCart($id) {
-
-        if(isset($_SESSION["shoppingCart"])) {
-            foreach($_SESSION["shoppingCart"] as $key => $item) {
-                if($item->getId() == $id) {
-                    unset($_SESSION["shoppingCart"][$key]);
-                }
-            }
-        }
-
-    }
-    public function destroySesion() {
-        if (isset($_SESSION["shoppingCart"])){
-            unset($_SESSION["shoppingCart"]);
-
-        }
-
-
-
-    }
-
-    public function errors($param) {
+    public function errors($param,$alert) {
          if($param) {
-            foreach($param as $errors) {
-                echo $errors;
-                echo '<br>';
-            }
+             if($alert) {
+                 foreach($param as $errors) {
+                     echo $errors;
+                     echo "\n";
+
+                 }
+
+
+             } else {
+                 foreach($param as $errors) {
+                     echo $errors;
+                     echo '<br>';
+                 }
+             }
+
          }
     }
 

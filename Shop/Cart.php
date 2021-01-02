@@ -1,6 +1,7 @@
 <?php
 require_once "../View/View.php";
 $view= new View();
+require_once("../Controller.php");
 include("../User/Server.php");
 ?>
 
@@ -12,16 +13,9 @@ include("../User/Server.php");
     $view->headerRequimenets();
 
     ?>
-
-
-
 </head>
-
 <body>
-
 <div class="BackGround">
-
-
     <?php
 
     $view->showNavbar();
@@ -46,9 +40,7 @@ include("../User/Server.php");
                     <tbody id="table">
                     <tr>
                         <?php
-
                             $view->showCartItem();
-
                         ?>
                     </tr>
 
@@ -56,17 +48,28 @@ include("../User/Server.php");
                 </table>
 
             </div>
+            <div class="d-flex justify-content-center" id="createButton">
+                <script>
+                    showButton();
+                    function showButton() {
+                        $.ajax({
+                            url: "CreateOrder.php",
+                            success:function(data) {
+                                $('#createButton').html(data);
+                            }
+                        })
+                    }
+                </script>
 
-
+            </div>
         </div>
+
 
 
     </div>
 
     <script>
-
         $(document).ready(function() {
-
             $(document).on('click', '.removeAll', function () {
                 $.ajax({
                     url: "Destroy.php",
@@ -75,10 +78,9 @@ include("../User/Server.php");
                     {
                         alert("Košík vyprázdnený");
                         $('#table').html(data);
-
-
                     }
                 })
+                showButton();
             });
 
             $(document).on('click', '.remove_from_cart', function () {
@@ -93,16 +95,12 @@ include("../User/Server.php");
 
                     }
                 })
+               showButton();
             });
-
 
         });
 
     </script>
-
-
-
-
 
     <?php $view->showFooter(); ?>
 

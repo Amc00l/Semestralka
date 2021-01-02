@@ -51,6 +51,17 @@ include("../User/Server.php");
 
                     </li>
                 </ul>
+                <div class="form-row">
+                    <div class="form-group col-md-6 align-items-center" >
+                        <label for="showed">Zobraziť </label>
+                        <select id="showed" class="form-control">
+                            <option selected>Vybrať...</option>
+                            <option>6</option>
+                            <option>12</option>
+                            <option>18</option>
+                        </select>
+                    </div>
+                </div>
                 <h2>Položky</h2>
                 <div class="text-center">
                     <div id="Items">
@@ -72,20 +83,9 @@ include("../User/Server.php");
                     </div>
 
                 </div>
-
-
-
-
-
-
             </div>
         </div>
-
-
-
     </div>
-
-
     <script>
 
         $(document).ready(function() {

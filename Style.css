@@ -1,6 +1,5 @@
 .body{
 
-
 }
 
 .BackGround{
@@ -11,14 +10,9 @@
     background-size: cover;
     min-height: 100%;
     margin-bottom: -50px;
-
-
-
-
 }
 
 .Logo{
-
     margin-top: 1%;
     margin-left: 1%;
 
@@ -141,9 +135,6 @@
     font-size:15px;
     text-align: justify;
     font-weight: bold;
-
-
-
 
 }
 .row{

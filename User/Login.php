@@ -46,7 +46,7 @@ include("Server.php");
                 <div class="form-group">
                     <input type="password" id="password" name="password" class="form-control" placeholder="Password">
                 </div>
-                    <input type="submit"  id="Prihlasit" name="Prihlásiť" class="btn btn-dark" value="Prihlásiť" ">
+                    <input type="submit"  id="Prihlasit" name="Prihlásiť" class="btn btn-dark" value="Prihlásiť">
 
             </form>
                 <div id="error">
@@ -58,14 +58,7 @@ include("Server.php");
         </div>
 
     </div>
-
-
-
-
-
-
     <?php $view->showFooter(); ?>
-
 
 </div>
 
