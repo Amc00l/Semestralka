@@ -107,8 +107,8 @@ class View
                                     <img class="card-img-top" src="<?php echo$row["image"]?>">
                                     <div class="card-body">
                                         <h2 class="card-title"><?php echo $row["part"];?> <br> <?php echo $row["nameModel"];?> </h2>
-                                        <h4>Cena: <?php echo $row["price"];?>€</h4>
-                                        <input type="button" class="btn btn-warning control" name="show" value="Zobraz popis" onclick="alert('<?php echo $row["text"];?>');">
+                                        <h4><strong>Cena: <?php echo number_format($row["price"],2,',','');?> €</strong> </h4>
+                                        <input type="button" class="btn btn-warning form-control" name="show" value="Zobraz popis" onclick="alert('<?php echo $row["text"] . " " .$row["nameModel"];?>');">
                                         <input type="hidden" id="partId<?php echo $row["idPart"];?>" name="partId<?php echo $row["idPart"];?>" value="<?php echo $row["idPart"];?>" />
                                         <input type="hidden" id="partPrice<?php echo $row["idPart"];?>" name="partPrice<?php echo $row["idPart"];?>" value="<?php echo $row["price"];?>" />
                                         <input type="hidden" id="modelId<?php echo $row["idPart"];?>" name="modelId<?php echo $row["idPart"];?>" value="<?php echo $row["modelId"];?>" />
@@ -157,9 +157,9 @@ class View
                 <tr>
                     <th scope="row"><?php echo $item->getModel();?></th>
                     <td><?php echo $item->getName();?></td>
-                    <td><?php echo $item->getPrice();?></td>
+                    <td><?php echo number_format($item->getPrice(),2,',','');?></td>
                     <td><?php echo $item->getQuantity();?></td>
-                    <td><?php echo $item->totalPrice();?></td>
+                    <td><?php echo number_format($item->getTotal(),2,',','');?></td>
                     <td><input type="button" name="remove_from_cart" id="<?php echo $item->getId();?>" class="btn btn-warning form-control remove_from_cart" value="Odstrániť" /></td>
                 </tr>
                 <?php
@@ -168,7 +168,7 @@ class View
             if(count($_SESSION["shoppingCart"]) > 0){
                 ?>
                 <td colspan="4">Celková suma</td>
-                <td><?php echo $totalPrice;?></td>
+                <td><?php echo number_format($totalPrice,2,',','');?></td>
                 <td><input type="button" name="removeAll" id="removeAll" class="btn btn-danger form-control removeAll" value="Vyprázdniť košík" /></td>
                 <?php
             } else {?>

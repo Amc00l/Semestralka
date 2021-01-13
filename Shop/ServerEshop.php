@@ -25,8 +25,6 @@
     $view->showItems($result,$itemOnPage,$startIndex,$endIndex,$indexRow);
     $view->showButtons($buttons,$paIdModel);
     $mySql->Close();
-
-
 ?>
 
 

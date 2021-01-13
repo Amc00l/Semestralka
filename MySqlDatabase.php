@@ -53,7 +53,11 @@ class MySqlDatabase
 
     public function SelectFromDatabaseForEshop($paIdModel){
         $paIdModel = $this->connection->real_escape_string($paIdModel);
-        $sqlSelectEshopData = "SELECT model.nameModel as nameModel, model.idModel as modelId, listparts.idPart as idPart, listparts.partNumber as numberPart, listparts.price as price, listparts.locationImage as image, listparts.partName as part, listparts.text as text FROM model join listparts WHERE model.idModel = '$paIdModel'   AND  model.idModel = listparts.idModel";
+
+        $sqlSelectEshopData = "SELECT model.nameModel as nameModel, model.idModel as modelId, partlist.idPart as idPart, partlist.price as price, offer.imageLocation as image, partlist.text as text, partlist.partName as part
+                                FROM model
+                                JOIN offer, partlist
+                                WHERE model.idModel = '$paIdModel' AND  model.idModel = offer.idModel  AND offer.idPartNumber = partlist.idPart";
         return $this->connection->query($sqlSelectEshopData);
     }
 
