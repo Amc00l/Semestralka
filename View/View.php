@@ -198,6 +198,7 @@ class View
     public function errors($param,$alert) {
          if($param) {
              if($alert) {
+
                  foreach($param as $errors) {
                      echo $errors;
                      echo "\n";
@@ -207,8 +208,7 @@ class View
 
              } else {
                  foreach($param as $errors) {
-                     echo $errors;
-                     echo '<br>';
+                     ?><p> <?php echo $errors;?></p> <?php
                  }
              }
 
