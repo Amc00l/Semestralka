@@ -44,10 +44,11 @@ class MySqlDatabase
         $sqlUpdatePass = "UPDATE users SET password='$newPass'  WHERE username = '$username'";
         return $result = mysqli_query($this->connection, $sqlUpdatePass);
     }
-    public function SelectExistUser($usernameLogin,$passLogin){
+
+
+    public function SelectExistUser($usernameLogin){
         $usernameLogin =$this->connection->real_escape_string($usernameLogin);
-        $passLogin =$this->connection->real_escape_string($passLogin);
-        $sqlSelectUser = "SELECT * FROM users WHERE username = '$usernameLogin' AND  password = '$passLogin'";
+        $sqlSelectUser = "SELECT * FROM users WHERE username = '$usernameLogin'";
         return $result = mysqli_query($this->connection, $sqlSelectUser);
     }
 

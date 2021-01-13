@@ -53,7 +53,7 @@ include("../User/Server.php");
                 </ul>
                 <h2>Položky</h2>
                 <div class="text-center">
-                    <div id="Items">
+                    <div class="offer" id="Items">
                         <script>
                             function loadPage(page, paModel) {
                                 var model = $(paModel).attr("id");

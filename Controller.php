@@ -125,7 +125,8 @@ class Controller
     }
 
     public static function checkRegister($con,$username,$pass,$name,$surname,$email){
-        $pass= md5($pass);
+        $pass = password_hash($pass, PASSWORD_DEFAULT);
+
         $view = new View();
         if (empty($username)) {
             $_SESSION["error"] = true;
@@ -185,24 +186,28 @@ class Controller
         }
 
         if(!($_SESSION["error"])) {
-            $passLogin = md5($passLogin);
-            $result= $con->SelectExistUser($usernameLogin,$passLogin);
+            $result= $con->SelectExistUser($usernameLogin);
+
             if (mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_row($result);
-                $user = new User($row[1],$row[2],$row[3],$row[4],$row[5]);
-                $_SESSION["login"] = true;
-                $_SESSION["user"] = $user;
-                echo "ok";
+                if(password_verify($passLogin, $row[2])) {
+                    $user = new User($row[1],$row[2],$row[3],$row[4],$row[5]);
+                    $_SESSION["login"] = true;
+                    $_SESSION["user"] = $user;
+                    echo "ok";
+                } else {
+                    array_push($_SESSION["array"], "Používateľské meno a heslo sa nezhodujú.");
+                    $_SESSION["error"] = true;
+                    $view->errors($_SESSION["array"],false);
+                }
             } else {
-                array_push($_SESSION["array"], "Používateľské meno a heslo sa nezhodujú.");
+                array_push($_SESSION["array"], "Takýto užívateľ v databáze neexistuje.");
                 $_SESSION["error"] = true;
                 $view->errors($_SESSION["array"],false);
             }
 
-
         } else {
             $view->errors($_SESSION["array"],false);
-
         }
     }
 
@@ -228,8 +233,7 @@ class Controller
         }
 
         if (!($_SESSION["error"])) {
-            $oldPass = md5($oldPass);
-            if ($oldPass != $user->getPass()) {
+            if (!(password_verify($oldPass, $user->getPass()))) {
                 array_push($_SESSION["array"], "Nesprávne staré heslo.");
                 $_SESSION["error"] = true;
             }
@@ -238,7 +242,7 @@ class Controller
                 $_SESSION["error"] = true;
             }
             if (!($_SESSION["error"])) {
-                $newPass = md5($newPass);
+                $newPass = password_hash($newPass, PASSWORD_DEFAULT);
                 $username = $user->getUsername();
                 $result = $con->UpdateChangePasswond($newPass, $username);
                 if ($result) {
