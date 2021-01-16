@@ -1,8 +1,8 @@
 <?php
-require_once "../View/View.php";
+require_once "../View.php";
 $view= new View();
 require_once("../Controller.php");
-include("../User/Server.php");
+include("../Server.php");
 ?>
 
 <!DOCTYPE html>
@@ -52,8 +52,11 @@ include("../User/Server.php");
                 <script>
                     showButton();
                     function showButton() {
+                        var clickedCreateOrder = "createOrder";
                         $.ajax({
-                            url: "CreateOrder.php",
+                            url: "../Server.php",
+                            method:"POST",
+                            data: {clickedCreateOrder: clickedCreateOrder},
                             success:function(data) {
                                 $('#createButton').html(data);
                             }
@@ -71,9 +74,11 @@ include("../User/Server.php");
     <script>
         $(document).ready(function() {
             $(document).on('click', '.removeAll', function () {
+            var clickedRemoveAll = "removeAllItems";
                 $.ajax({
-                    url: "Destroy.php",
+                    url: "../Server.php",
                     method:"POST",
+                    data: {clickedRemoveAll: clickedRemoveAll},
                     success:function(data)
                     {
                         alert("Košík vyprázdnený");
@@ -85,10 +90,11 @@ include("../User/Server.php");
 
             $(document).on('click', '.remove_from_cart', function () {
                 var id = $(this).attr("id");
+                var clickedRemoveItem = "removeItem";
                 $.ajax({
-                    url: "DestroyItem.php",
+                    url: "../Server.php",
                     method: "POST",
-                    data: {id: id},
+                    data: {id: id, clickedRemoveItem: clickedRemoveItem},
                     success: function (data) {
                         alert("Produkt odstránený z košíka")
                         $('#table').html(data);

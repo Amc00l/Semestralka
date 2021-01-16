@@ -19,23 +19,31 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee7c6286-909b-4827-a5cb-9198e3c73bfb" name="Default Changelist" comment="Version 6.03">
-      <change afterPath="$PROJECT_DIR$/Pictures/ngkclassic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/User/AdminAddItem.php" afterDir="false" />
+    <list default="true" id="ee7c6286-909b-4827-a5cb-9198e3c73bfb" name="Default Changelist" comment="Version 7.00">
+      <change afterPath="$PROJECT_DIR$/Server.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySqlDatabase.php" beforeDir="false" afterPath="$PROJECT_DIR$/MySqlDatabase.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop/CreateOrder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop/Destroy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop/DestroyItem.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/ServerEshop.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/ServerEshop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop/ServerCart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop/ServerEshop.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop/Shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/Shop.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/AdminAddItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/AdminAddItem.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/ChangePass.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/ChangePass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Server.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Models.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Models.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Server.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/AboutAs.php" beforeDir="false" afterPath="$PROJECT_DIR$/WebStatic/AboutAs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/WebStatic/Contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/WebStatic/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/Models.php" beforeDir="false" afterPath="$PROJECT_DIR$/WebStatic/Models.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/View.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,19 +90,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\WebStatic" />
+      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka" />
+      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\User" />
+      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\Shop" />
+      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\Shop\Cart" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\Pictures" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\User" />
-      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka" />
-      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\Shop" />
-      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\Shop\Cart" />
-      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\User\Register" />
-    </key>
   </component>
   <component name="RunManager">
-    <configuration name="Server.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/User/Server.php">
+    <configuration name="Server.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Server.php">
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -154,7 +162,7 @@
       <workItem from="1610553020932" duration="6196000" />
       <workItem from="1610789841021" duration="7487000" />
       <workItem from="1610800554629" duration="9333000" />
-      <workItem from="1610809994178" duration="7511000" />
+      <workItem from="1610809994178" duration="13727000" />
     </task>
     <task id="LOCAL-00001" summary="Version 2.01">
       <created>1605913059124</created>
@@ -275,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610559604421</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Version 7.00">
+      <created>1610817594823</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1610817594823</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +326,8 @@
     <MESSAGE value="Version 6.01" />
     <MESSAGE value="Version 6.02" />
     <MESSAGE value="Version 6.03" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 6.03" />
+    <MESSAGE value="Version 7.00" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 7.00" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1608995041776">
@@ -380,10 +396,10 @@
     </state>
     <state x="774" y="177" width="796" height="560" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610804866780" />
     <state x="2133" y="340" width="1119" height="501" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608806185439" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610803730843">
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610818319079">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610803730843" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610818319079" />
     <state x="712" y="328" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1605775080772">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

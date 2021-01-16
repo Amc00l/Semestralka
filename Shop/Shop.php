@@ -1,7 +1,7 @@
 <?php
-require_once "../View/View.php";
+require_once "../View.php";
 $view= new View();
-include("../User/Server.php");
+include("../Server.php");
 ?>
 
 <!DOCTYPE html>
@@ -57,10 +57,11 @@ include("../User/Server.php");
                         <script>
                             function loadPage(page, paModel) {
                                 var model = $(paModel).attr("id");
+                                var clickedLoad = "clickedLoad"
                                 $.ajax({
-                                    url:"ServerEshop.php",
+                                    url:"../Server.php",
                                     method:"POST",
-                                    data:{model: model, page: page},
+                                    data:{model: model, page: page, clickedLoad:clickedLoad},
                                     success:function(data)
                                     {
                                         $('#Items').html(data);
@@ -84,11 +85,12 @@ include("../User/Server.php");
                 var partName = $('#partName' + id + '').val();
                 var quantity = $('#quantity' + id + '' ).val();
                 var partPrice = $('#partPrice' + id + '').val();
+                var clickedAddToCart = "addToCart";
                 if(quantity > 0 ) {
                     $.ajax({
-                        url:"ServerCart.php",
+                        url:"../Server.php",
                         method:"POST",
-                        data:{id: id, mod: mod, partName: partName, quantity: quantity, partPrice: partPrice},
+                        data:{id: id, mod: mod, partName: partName, quantity: quantity, partPrice: partPrice,clickedAddToCart: clickedAddToCart },
                         success:function()
                         {
                             alert("Produkt pridaný do košíka")

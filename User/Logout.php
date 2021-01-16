@@ -1,5 +1,5 @@
 <?php
-        include("Server.php");
+        include("../Server.php");
         if(isset($_SESSION["login"])) {
             unset($_SESSION["login"]);
         }

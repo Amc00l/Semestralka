@@ -1,7 +1,7 @@
 <?php
-require_once "../View/View.php";
+require_once "../View.php";
 $view= new View();
-include("Server.php");
+include("../Server.php");
 
 ?>
 
@@ -95,7 +95,7 @@ include("Server.php");
             var email = $('#email').val();
             var clickedRegister = "Registrovat";
             $.ajax({
-                url:"Server.php",
+                url:"../Server.php",
                 method:"POST",
                 data:{username: usr, password: pass, name: name, surname: surname, email: email, clickedRegister: clickedRegister},
                 success:function(data)

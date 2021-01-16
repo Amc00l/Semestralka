@@ -1,5 +1,5 @@
 <?php
-require_once "../Shop/Item.php";
+require_once "Shop/Item.php";
 class View
 {
     public function __construct()
@@ -22,7 +22,7 @@ class View
 
     public function showNavbar() { ?>
         <div class="logo">
-            <a href="Home.php">
+            <a href="../WebStatic/Home.php">
                 <img src="../Pictures/ktm.jpg" alt="KtmLogo" class="Logo" width="100" height="100">
             </a>
         </div>
@@ -36,16 +36,16 @@ class View
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class ="nav-item active ">
-                        <a class="nav-link" href="../View/Home.php">Domov</a>
+                        <a class="nav-link" href="../WebStatic/Home.php">Domov</a>
                     </li>
                     <li class ="nav-item active">
-                        <a class="nav-link" href="../View/Models.php">Modely</a>
+                        <a class="nav-link" href="../WebStatic/Models.php">Modely</a>
                     </li>
                     <li class ="nav-item active">
-                        <a class="nav-link" href="../View/AboutAs.php">O nás</a>
+                        <a class="nav-link" href="../WebStatic/AboutAs.php">O nás</a>
                     </li>
                     <li class ="nav-item active">
-                        <a class="nav-link" href="../View/Contact.php">Kontakt</a>
+                        <a class="nav-link" href="../WebStatic/Contact.php">Kontakt</a>
                     </li>
                     <li class ="nav-item active">
                         <a class="nav-link" href="../Shop/Shop.php">Eshop</a>

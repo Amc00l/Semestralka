@@ -1,6 +1,6 @@
 <?php
 require_once "User/User.php";
-require_once "View/View.php";
+require_once "View.php";
 
 class Controller
 {
@@ -31,6 +31,7 @@ class Controller
 
         }
     }
+
 
     public static function checkConfirm($name, $surname, $address, $address2, $city, $zip, $country, $selected, $check) {
         $view = new View();
@@ -209,6 +210,21 @@ class Controller
         }
     }
 
+    public static function loadItems($con,$page,$paIdModel,$itemOnPage,$view) {
+
+        $paPage =intval($page);
+        $result = $con->SelectFromDatabaseForEshop($paIdModel);
+        $numRows = $result->num_rows;
+        $buttons = $view->getButtons($numRows);
+        $endIndex = $paPage*$itemOnPage;
+        $startIndex = $endIndex-$itemOnPage;
+        $indexRow = 0;
+        $itemPage = 0;
+        $view->showItems($result,$itemPage,$startIndex,$endIndex,$indexRow);
+        $view->showButtons($buttons,$paIdModel);
+
+    }
+
     public static function checkChange($con,$oldPass,$newPass,$conNewPas)
     {
         $view = new View();
@@ -338,7 +354,7 @@ class Controller
     }
 
 
-    public function deleteUser($con){
+    public static function deleteUser($con){
         $user = $_SESSION["user"];
         $username = $user->getUsername();
         $result = $con->DeleteExistUser($username);

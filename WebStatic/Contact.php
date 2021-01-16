@@ -1,7 +1,7 @@
 <?php
-require_once "../View/View.php";
+require_once "../View.php";
 $view= new View();
-include("../User/Server.php");
+include("../Server.php");
 
 ?>
 

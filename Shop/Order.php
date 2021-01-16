@@ -1,7 +1,7 @@
 <?php
-require_once "../View/View.php";
+require_once "../View.php";
 $view= new View();
-include("../User/Server.php");
+include("../Server.php");
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ include("../User/Server.php");
     <div class="Obsah">
         <div class="Text">
             <h1>Vytvorenie objednávky</h1>
-            <form action="../View/Home.php" onsubmit="createOrder();return false;">
+            <form action="../WebStatic/Home.php" onsubmit="createOrder();return false;">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label>Meno</label>
@@ -111,14 +111,14 @@ include("../User/Server.php");
             console.log(gridCheck);
             var clickedConfirm = "Potvrdit";
             $.ajax({
-                url:"../User/Server.php",
+                url:"../Server.php",
                 method:"POST",
                 data:{name: name, surname: surname, address: address, address2:address2,city: city,zip: zip,country: country,selected:selected, clickedConfirm:clickedConfirm, aggre:aggre},
                 success:function(data)
                 {
                     if(data === "ok") {
                         alert("Objednávka vytvorená");
-                        window.location.href="../View/Home.php";
+                        window.location.href="../WebStatic/Home.php";
                     } else {
                         alert(data);
 

@@ -1,8 +1,8 @@
 <?php
 
-require_once "../View/View.php";
+require_once "../View.php";
 $view= new View();
-include("../User/Server.php");
+include("../Server.php");
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +29,7 @@ include("../User/Server.php");
     <div class="Obsah">
         <div class="Text">
             <h1>Pridanie položky</h1>
-            <form action="../View/Home.php" onsubmit="addItem();return false;">
+            <form action="../WebStatic/Home.php" onsubmit="addItem();return false;">
                 <div class="form-row">
                     <div class="form-group col-md-2">
                         <label>Id dielu</label>
@@ -83,7 +83,7 @@ include("../User/Server.php");
         var Location = $('#Location').val();
         var clickedAdd = "Pridat";
         $.ajax({
-            url:"../User/Server.php",
+            url:"../Server.php",
             method:"POST",
             data:{idPart: idPart, PartName: PartName, Price: Price, Text:Text, Model: Model, Location: Location, clickedAdd: clickedAdd},
             success:function(data)
