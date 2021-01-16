@@ -38,11 +38,11 @@ include("../User/Server.php");
                     </tr>
                     </thead>
                     <tbody id="table">
-                    <tr>
+
                         <?php
                             $view->showCartItem();
                         ?>
-                    </tr>
+
 
                     </tbody>
                 </table>

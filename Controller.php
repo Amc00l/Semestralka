@@ -1,6 +1,7 @@
 <?php
 require_once "User/User.php";
 require_once "View/View.php";
+
 class Controller
 {
 
@@ -66,9 +67,6 @@ class Controller
             $_SESSION["error"] = true;
             array_push($_SESSION["array"],"Nevybrali ste dopravu.");
         }
-
-
-
 
         if(!($_SESSION["error"])) {
 
@@ -227,10 +225,13 @@ class Controller
             array_push($_SESSION["array"], "Nezadali ste heslo pre potvrdenie nového hesla.");
             $_SESSION["error"] = true;
         }
-        if($oldPass == $newPass){
-            array_push($_SESSION["array"], "Nové heslo je identické so starým.");
-            $_SESSION["error"] = true;
+        if(!empty($oldPass)) {
+            if($oldPass == $newPass){
+                array_push($_SESSION["array"], "Nové heslo je identické so starým.");
+                $_SESSION["error"] = true;
+            }
         }
+
 
         if (!($_SESSION["error"])) {
             if (!(password_verify($oldPass, $user->getPass()))) {
@@ -259,6 +260,83 @@ class Controller
 
 
     }
+
+    public static function addItem($con,$idPart,$partName,$price,$text,$idModel,$imageLocation)
+    {
+        $view = new View();
+        if (empty($idPart)) {
+            array_push($_SESSION["array"], "Nezadali ste číslo dielu.");
+            $_SESSION["error"] = true;
+        }
+        if (empty($partName)) {
+            array_push($_SESSION["array"], "Nezadali ste názov dielu.");
+            $_SESSION["error"] = true;
+        }
+        if (empty($price)) {
+            array_push($_SESSION["array"], "Nezadali ste cenu.");
+            $_SESSION["error"] = true;
+        }
+
+        if (empty($text)) {
+            array_push($_SESSION["array"], "Nezadali ste text položky.");
+            $_SESSION["error"] = true;
+        }
+        if (empty($idModel)) {
+            array_push($_SESSION["array"], "Nezadali ste text položky.");
+            $_SESSION["error"] = true;
+        }
+
+        if (empty($imageLocation)) {
+            array_push($_SESSION["array"], "Nezadali ste adresu obrázku.");
+            $_SESSION["error"] = true;
+        }
+
+
+        if (!($_SESSION["error"])) {
+            $result = $con->checkInTablePartList($idPart);
+            if ($result->num_rows == 0) {
+                $con->InsertNewItem($idPart, $partName, $price, $text);
+                $result = $con->checkInTableOffer($idPart, $idModel);
+                if ($result->num_rows == 0) {
+                    $result = $con->InsertToOffer($idModel, $idPart, $imageLocation);
+                    if ($result) {
+                        echo "ok";
+                    } else {
+                        array_push($_SESSION["array"], "Nepodarilo sa vložit do databázy.");
+                        $view->errors($_SESSION["array"], true);
+                    }
+                }
+            } else {
+                $result = $con->checkInTableOffer($idPart, $idModel);
+                if($result->num_rows == 0) {
+                    $result = $con->InsertToOffer($idModel, $idPart, $imageLocation);
+                    if($result) {
+                        echo "ok";
+                    } else {
+                        array_push($_SESSION["array"], "Takýto model neexistuje.");
+                        $view->errors($_SESSION["array"], true);
+                    }
+                } else {
+                    array_push($_SESSION["array"], "Takáto položka už existuje.");
+                    $view->errors($_SESSION["array"], true);
+
+
+                }
+
+
+
+
+            }
+        } else {
+            $view->errors($_SESSION["array"], true);
+        }
+
+
+
+
+
+    }
+
 
     public function deleteUser($con){
         $user = $_SESSION["user"];

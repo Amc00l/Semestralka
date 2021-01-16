@@ -1,8 +1,6 @@
 <?php
-
     require_once "../MySqlDatabase.php";
     require_once "../View/View.php";
-
     session_start();
     $view = new View();
     $mySql = new MySqlDatabase();

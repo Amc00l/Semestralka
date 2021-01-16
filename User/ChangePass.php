@@ -10,7 +10,7 @@ include("Server.php");
 <html lang="sk">
 
 <head>
-    <title>Prihlasenie</title>
+    <title>Zmena</title>
     <link rel="stylesheet" href="../Style.css">
     <?php
         $view->headerRequimenets();
@@ -27,10 +27,7 @@ include("Server.php");
 
     $view->showNavbar();
 
-
     ?>
-
-
 
     <div class="Obsah">
         <div class="Format">

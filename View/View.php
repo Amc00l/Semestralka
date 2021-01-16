@@ -167,19 +167,26 @@ class View
 
             if(count($_SESSION["shoppingCart"]) > 0){
                 ?>
-                <td colspan="4">Celková suma</td>
-                <td><?php echo number_format($totalPrice,2,',','');?></td>
-                <td><input type="button" name="removeAll" id="removeAll" class="btn btn-danger form-control removeAll" value="Vyprázdniť košík" /></td>
+                <tr>
+                    <td colspan="4">Celková suma</td>
+                    <td><?php echo number_format($totalPrice,2,',','');?></td>
+                    <td><input type="button" name="removeAll" id="removeAll" class="btn btn-danger form-control removeAll" value="Vyprázdniť košík" /></td>
+                </tr>
+
                 <?php
             } else {?>
-                <td colspan="6">Košík je prázdny</td>
+                  <tr>
+                      <td colspan="6">Košík je prázdny</td>
+                  </tr>
                 <?php
             }
 
         } else { ?>
-            <td colspan="6">Košík je prázdny</td>
+            <tr>
+                <td colspan="6">Košík je prázdny</td>
+            </tr>
 
-             <?php
+            <?php
         }
 
     }
@@ -194,6 +201,7 @@ class View
         </footer>
         <?php
     }
+
 
     public function errors($param,$alert) {
          if($param) {

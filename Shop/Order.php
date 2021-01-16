@@ -108,7 +108,6 @@ include("../User/Server.php");
                 aggre ="checked";
 
             }
-
             console.log(gridCheck);
             var clickedConfirm = "Potvrdit";
             $.ajax({

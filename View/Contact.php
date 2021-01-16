@@ -70,7 +70,6 @@ include("../User/Server.php");
     <?php $view->showFooter(); ?>
 
 </div>
-</div>
 
 </body>
 </html>

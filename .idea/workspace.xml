@@ -19,9 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee7c6286-909b-4827-a5cb-9198e3c73bfb" name="Default Changelist" comment="Version 6.02">
+    <list default="true" id="ee7c6286-909b-4827-a5cb-9198e3c73bfb" name="Default Changelist" comment="Version 6.03">
+      <change afterPath="$PROJECT_DIR$/Pictures/ngkclassic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User/AdminAddItem.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySqlDatabase.php" beforeDir="false" afterPath="$PROJECT_DIR$/MySqlDatabase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop/ServerEshop.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/ServerEshop.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/ChangePass.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/ChangePass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Server.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/Models.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Models.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/View.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,15 +82,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka" />
-      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\Shop" />
-      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\User" />
-      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\Shop\Cart" />
-      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\User\Register" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\Pictures" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\User" />
+      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka" />
+      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\Shop" />
+      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\Shop\Cart" />
+      <recent name="D:\FRI\5. semester\VAII\php_mysql\www\Semestralka\User\Register" />
     </key>
   </component>
   <component name="RunManager">
@@ -138,7 +151,10 @@
       <workItem from="1609626902328" duration="1250000" />
       <workItem from="1610479219644" duration="2099000" />
       <workItem from="1610481348704" duration="19261000" />
-      <workItem from="1610553020932" duration="6093000" />
+      <workItem from="1610553020932" duration="6196000" />
+      <workItem from="1610789841021" duration="7487000" />
+      <workItem from="1610800554629" duration="9333000" />
+      <workItem from="1610809994178" duration="7511000" />
     </task>
     <task id="LOCAL-00001" summary="Version 2.01">
       <created>1605913059124</created>
@@ -252,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610559096319</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Version 6.03">
+      <created>1610559604421</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1610559604421</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +310,8 @@
     <MESSAGE value="Version 6.00" />
     <MESSAGE value="Version 6.01" />
     <MESSAGE value="Version 6.02" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 6.02" />
+    <MESSAGE value="Version 6.03" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 6.03" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1608995041776">
@@ -329,15 +353,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="724" y="243" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609082689612" />
-    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog" timestamp="1609622156401">
+    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog" timestamp="1610803944576">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609622156401" />
+    <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610803944576" />
     <state x="2714" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608815805260" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610559098368">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610559607702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610559098368" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610559607702" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608950259229" />
     <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1605708507188">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -351,15 +375,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="340" width="408" height="339" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610494075272" />
-    <state x="774" y="177" width="796" height="560" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610558719909">
+    <state x="774" y="177" width="796" height="560" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610804866780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="774" y="177" width="796" height="560" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610558719909" />
+    <state x="774" y="177" width="796" height="560" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610804866780" />
     <state x="2133" y="340" width="1119" height="501" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608806185439" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610482872201">
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610803730843">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610482872201" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610803730843" />
     <state x="712" y="328" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1605775080772">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

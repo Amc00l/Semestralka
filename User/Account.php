@@ -16,7 +16,7 @@
 <html lang="sk">
 
 <head>
-    <title>Prihlaseny</title>
+    <title>Účet</title>
     <link rel="stylesheet" href="../Style.css">
     <?php
         $view->headerRequimenets();
@@ -31,8 +31,6 @@
 
         <?php
         $view->showNavbar();
-
-
         ?>
 
         <div class="Obsah">
@@ -58,7 +56,8 @@
                     </form>
 
 
-                    <form action="" method="post">
+
+                    <form method="post">
 
                         <div class="form-group">
                             <div class="userInfo">
@@ -67,6 +66,25 @@
                         </div>
 
                     </form>
+                <?php
+
+                if(isset($_SESSION["user"])) {
+                    if($user->getUsername() === "admin") { ?>
+                        <form action="AdminAddItem.php" method="post">
+
+                            <div class="form-group">
+                                <div class="userInfo">
+                                    <input type="submit" name="Add" class="btn btn-dark" value="Pridať item">
+                                </div>
+                            </div>
+
+                        </form> <?php
+
+                    }
+                }
+                ?>
+
+
 
             </div>
 

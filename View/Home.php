@@ -49,10 +49,7 @@ include("../User/Server.php");
                 Posledná z mojích motocyklov je KTM SX 125. Viď foto.
             </p>
             <div class="Sx125">
-                <a>
-                    <img src="../Pictures/IMG_20200310_171109.jpg" alt= "MyKtm" style="width: 100%">
-                </a>
-                <div class="desSX125">KTM SX 125 2002</div>
+                <img id=myKtm src="../Pictures/IMG_20200310_171109.jpg" alt= "MyKtm" style="width: 100%">
             </div>
 
 

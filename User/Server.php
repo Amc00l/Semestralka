@@ -27,10 +27,17 @@
         Controller::checkChange($con,$_POST["passOld"],$_POST["passNew"],$_POST["passConfirm"]);
 
     }
+
+
     if (isset($_POST["Delete"])) {
         Controller::deleteUser($con);
 
     }
+
+    if(isset($_POST["clickedAdd"])) {
+        Controller::addItem($con,$_POST["idPart"],$_POST["PartName"],$_POST["Price"],$_POST["Text"],$_POST["Model"],$_POST["Location"]);
+    }
+
     $con->Close();
 
 

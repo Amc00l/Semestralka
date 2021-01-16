@@ -45,11 +45,40 @@ class MySqlDatabase
         return $result = mysqli_query($this->connection, $sqlUpdatePass);
     }
 
-
     public function SelectExistUser($usernameLogin){
         $usernameLogin =$this->connection->real_escape_string($usernameLogin);
         $sqlSelectUser = "SELECT * FROM users WHERE username = '$usernameLogin'";
         return $result = mysqli_query($this->connection, $sqlSelectUser);
+    }
+    public function InsertToOffer($idModel,$idPart,$imageLocation) {
+        $idPart =$this->connection->real_escape_string($idPart);
+        $idModel = $this->connection->real_escape_string($idModel);
+        $imageLocation = $this->connection->real_escape_string($imageLocation);
+        $offer = "insert into offer(idModel, idPartNumber, imageLocation) values('$idModel','$idPart','$imageLocation')";
+        return $result = mysqli_query($this->connection, $offer);
+    }
+
+    public function InsertNewItem($idPart, $partName,$Price,$Text) {
+        $idPart =$this->connection->real_escape_string($idPart);
+        $partName = $this->connection->real_escape_string($partName);
+        $Price = $this->connection->real_escape_string($Price);
+        $Text = $this->connection->real_escape_string($Text);
+        $partList = "insert into partlist(idPart, partName, price, text) values('$idPart','$partName','$Price','$Text')";
+        return $result = mysqli_query($this->connection, $partList);
+    }
+
+    public function checkInTablePartList($idPart) {
+        $idPart =$this->connection->real_escape_string($idPart);
+        $sqlCheck = "SELECT * FROM partlist WHERE idPart = '$idPart'";
+        return $result =  mysqli_query($this->connection, $sqlCheck);
+    }
+
+    public function checkInTableOffer($idPart,$idModel) {
+        $idPart =$this->connection->real_escape_string($idPart);
+        $idModel = $this->connection->real_escape_string($idModel);
+        $sqlCheck = "SELECT * FROM offer WHERE idPartNumber = '$idPart' AND  idModel ='$idModel'";
+        return $result =  mysqli_query($this->connection, $sqlCheck);
+
     }
 
     public function SelectFromDatabaseForEshop($paIdModel){
