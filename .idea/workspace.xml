@@ -19,31 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee7c6286-909b-4827-a5cb-9198e3c73bfb" name="Default Changelist" comment="Version 7.00">
-      <change afterPath="$PROJECT_DIR$/Server.php" afterDir="false" />
+    <list default="true" id="ee7c6286-909b-4827-a5cb-9198e3c73bfb" name="Default Changelist" comment="Version final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/Cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/CreateOrder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/Destroy.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/DestroyItem.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/ServerCart.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/ServerEshop.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop/Shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/Shop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/AdminAddItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/AdminAddItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/ChangePass.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/ChangePass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/Server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/AboutAs.php" beforeDir="false" afterPath="$PROJECT_DIR$/WebStatic/AboutAs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/WebStatic/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/WebStatic/Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Models.php" beforeDir="false" afterPath="$PROJECT_DIR$/WebStatic/Models.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebStatic/Models.php" beforeDir="false" afterPath="$PROJECT_DIR$/WebStatic/Models.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +145,8 @@
       <workItem from="1610553020932" duration="6196000" />
       <workItem from="1610789841021" duration="7487000" />
       <workItem from="1610800554629" duration="9333000" />
-      <workItem from="1610809994178" duration="13727000" />
+      <workItem from="1610809994178" duration="16125000" />
+      <workItem from="1611054656251" duration="9784000" />
     </task>
     <task id="LOCAL-00001" summary="Version 2.01">
       <created>1605913059124</created>
@@ -290,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610817594823</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Version final">
+      <created>1610823866652</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1610823866652</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +318,8 @@
     <MESSAGE value="Version 6.02" />
     <MESSAGE value="Version 6.03" />
     <MESSAGE value="Version 7.00" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 7.00" />
+    <MESSAGE value="Version final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version final" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1608995041776">
@@ -365,6 +357,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="682" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605911153902" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1611055281533">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611055281533" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1611055281533">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611055281533" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1611055281532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611055281532" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1611055281533">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611055281533" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1611055281533">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611055281533" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1611055281533">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611055281533" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1611055281533">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611055281533" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1611055281533">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611055281533" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1611055281533">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611055281533" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1611055281533">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611055281533" />
+    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1611055281533">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611055281533" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1611055281533">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611055281533" />
     <state x="724" y="243" key="NewPhpClassDialog" timestamp="1609082689612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -374,10 +414,10 @@
     </state>
     <state x="794" y="443" width="331" height="300" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610803944576" />
     <state x="2714" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608815805260" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610559607702">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610823867382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610559607702" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610823867382" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608950259229" />
     <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1605708507188">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -152,7 +152,7 @@
     background: rgba(0, 0, 0, 0.95);
 }
 
-.close {
+.close{
     position: absolute;
     top:40px;
     right:40px;
@@ -163,7 +163,18 @@
     display: block;
     max-width: 900px;
 }
+.inModal p{
+    padding-left: 5%;
+    padding-right: 5%;
 
+}
+
+.close1 {
+    float: right;
+    font-weight: bold;
+    padding-right: 1%;
+    font-size: 15px;
+}
 
 .gallery >div {
     background: rgba(0,0,0,0.95);

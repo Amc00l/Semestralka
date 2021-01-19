@@ -27,6 +27,7 @@ include("../Server.php");
 
     <div class="Obsah">
         <div class="Text">
+
             <div class="container">
                 <h1>Modely</h1>
                 <ul class="nav justify-content-center nav-tabs" role="tablist">
@@ -76,8 +77,33 @@ include("../Server.php");
             </div>
         </div>
     </div>
+    <div id="show" class="modal">
+        <div class="modal-content">
+            <div class="clos">
+                <span class="close1">X</span>
+            </div>
+            <div class="inModal">
+                <p id="par">...</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
     <script>
 
+        function showInfo(idButton,text) {
+            console.log(text);
+            let modal = document.getElementById("show");
+            let span = document.getElementsByClassName("close1")[0];
+            document.getElementById("par").innerHTML=text;
+            modal.style.display = "block";
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+        }
         $(document).ready(function() {
             $(document).on('click', '.add_item_to_cart', function () {
                 var id = $(this).attr("id");
@@ -104,10 +130,6 @@ include("../Server.php");
         });
 
     </script>
-
-
-
-
 
 
     <?php $view->showFooter(); ?>

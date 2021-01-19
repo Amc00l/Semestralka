@@ -104,11 +104,11 @@ class View
 
                             <div class="col-lg-4 mb-4">
                                 <div class="card">
-                                    <img class="card-img-top" src="<?php echo$row["image"]?>">
+                                    <img class="card-img-top" alt="img<?php echo $row["part"];?>" src="<?php echo$row["image"]?>">
                                     <div class="card-body">
                                         <h2 class="card-title"><?php echo $row["part"];?> <br> <?php echo $row["nameModel"];?> </h2>
                                         <h4><strong>Cena: <?php echo number_format($row["price"],2,',','');?> €</strong> </h4>
-                                        <input type="button" class="btn btn-warning form-control" name="show" value="Zobraz popis" onclick="alert('<?php echo $row["text"] . " " .$row["nameModel"];?>');">
+                                        <input type="button" id="show<?php echo $row["idPart"];?>" class="btn btn-warning form-control" name="show" value="Zobraz popis" onclick="showInfo(this.id,'<?php echo $row["text"] . " " .$row["nameModel"];?>')">
                                         <input type="hidden" id="partId<?php echo $row["idPart"];?>" name="partId<?php echo $row["idPart"];?>" value="<?php echo $row["idPart"];?>" />
                                         <input type="hidden" id="partPrice<?php echo $row["idPart"];?>" name="partPrice<?php echo $row["idPart"];?>" value="<?php echo $row["price"];?>" />
                                         <input type="hidden" id="modelId<?php echo $row["idPart"];?>" name="modelId<?php echo $row["idPart"];?>" value="<?php echo $row["modelId"];?>" />

@@ -125,7 +125,6 @@ class Controller
 
     public static function checkRegister($con,$username,$pass,$name,$surname,$email){
         $pass = password_hash($pass, PASSWORD_DEFAULT);
-
         $view = new View();
         if (empty($username)) {
             $_SESSION["error"] = true;
@@ -162,13 +161,8 @@ class Controller
 
 
             }
-
-
         } else {
-
             $view->errors($_SESSION["array"],false);
-
-
         }
     }
 

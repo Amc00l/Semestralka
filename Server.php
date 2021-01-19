@@ -36,7 +36,6 @@
     }
     if(isset($_POST["clickedAdd"])) {
         Controller::addItem($con,$_POST["idPart"],$_POST["PartName"],$_POST["Price"],$_POST["Text"],$_POST["Model"],$_POST["Location"]);
-
     }
 
     if(isset($_POST["clickedAddToCart"])) {
@@ -49,16 +48,13 @@
         Controller::addToCart($partId,$quantity,$item);
 
     }
-
     if(isset($_POST["clickedRemoveItem"])) {
         Controller::removeFromCart($_POST["id"]);
         $view->showCartItem();
         if(empty($_SESSION["shoppingCart"])) {
             Controller::destroySessionShoppingCart();
         }
-
     }
-
     if(isset($_POST["clickedRemoveAll"])) {
         Controller::destroySessionShoppingCart();
         $view->showCartItem();
@@ -81,7 +77,5 @@
         Controller::loadItems($con,$_POST["page"],$paIdModel,itemOnPage,$view);
     }
     $con->Close();
-
-
 
 ?>
