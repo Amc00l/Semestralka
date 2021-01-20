@@ -49,7 +49,7 @@ include("../Server.php");
                     <input type="submit"  id="Prihlasit" name="Prihlásiť" class="btn btn-dark" value="Prihlásiť">
 
             </form>
-                <div id="error">
+                <div id="error" class="err">
 
 
 

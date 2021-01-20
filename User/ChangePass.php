@@ -56,7 +56,7 @@ include("../Server.php");
                     <input type="submit" name="Zmenit" id="btn" class="btn btn-dark" value="Zmeniť">
                 </div>
 
-                <div id="error">
+                <div id="error" class="err">
 
 
 

@@ -215,9 +215,14 @@ class View
 
 
              } else {
+                 ?><p><?php
                  foreach($param as $errors) {
-                     ?><p> <?php echo $errors;?></p> <?php
-                 }
+                     echo $errors; ?>
+                     <br>
+                     <?php
+
+                 } ?> </p> <?php
+
              }
 
          }

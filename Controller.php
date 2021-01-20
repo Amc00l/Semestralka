@@ -33,8 +33,8 @@ class Controller
     }
 
 
-    public static function checkConfirm($name, $surname, $address, $address2, $city, $zip, $country, $selected, $check) {
-        $view = new View();
+    public static function checkConfirm($view, $name, $surname, $address, $address2, $city, $zip, $country, $selected, $check) {
+
         if (empty($name)) {
             $_SESSION["error"] = true;
             array_push($_SESSION["array"],"Nezadali ste meno.");
@@ -123,9 +123,8 @@ class Controller
 
     }
 
-    public static function checkRegister($con,$username,$pass,$name,$surname,$email){
-        $pass = password_hash($pass, PASSWORD_DEFAULT);
-        $view = new View();
+    public static function checkRegister($view,$con,$username,$pass,$name,$surname,$email){
+
         if (empty($username)) {
             $_SESSION["error"] = true;
             array_push($_SESSION["array"],"Nezadali ste používateľské meno.");
@@ -148,6 +147,7 @@ class Controller
         }
 
         if(!($_SESSION["error"])) {
+            $pass = password_hash($pass, PASSWORD_DEFAULT);
             $user = new User($username, $pass, $name, $surname, $email);
             $sql = $con->InsertNewUser($username,$pass,$name,$surname,$email);
             if (!(mysqli_query($con->getConnection(), $sql))) {
@@ -166,8 +166,7 @@ class Controller
         }
     }
 
-    public static function checkLogin($con,$usernameLogin,$passLogin) {
-        $view = new View();
+    public static function checkLogin($view,$con,$usernameLogin,$passLogin) {
         if(empty($usernameLogin)) {
             $_SESSION["error"] = true;
             array_push($_SESSION["array"],"Nezadali ste používateľské meno.");
@@ -204,7 +203,7 @@ class Controller
         }
     }
 
-    public static function loadItems($con,$page,$paIdModel,$itemOnPage,$view) {
+    public static function loadItems($view,$con,$page,$paIdModel,$itemOnPage) {
 
         $paPage =intval($page);
         $result = $con->SelectFromDatabaseForEshop($paIdModel);
@@ -219,9 +218,8 @@ class Controller
 
     }
 
-    public static function checkChange($con,$oldPass,$newPass,$conNewPas)
+    public static function checkChange($view,$con,$oldPass,$newPass,$conNewPas)
     {
-        $view = new View();
         $user = $_SESSION["user"];
         if (empty($oldPass)) {
             array_push($_SESSION["array"], "Nezadali ste staré heslo.");
@@ -271,9 +269,8 @@ class Controller
 
     }
 
-    public static function addItem($con,$idPart,$partName,$price,$text,$idModel,$imageLocation)
+    public static function addItem($view,$con,$idPart,$partName,$price,$text,$idModel,$imageLocation)
     {
-        $view = new View();
         if (empty($idPart)) {
             array_push($_SESSION["array"], "Nezadali ste číslo dielu.");
             $_SESSION["error"] = true;

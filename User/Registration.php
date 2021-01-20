@@ -68,7 +68,7 @@ include("../Server.php");
 
 
             </form>
-            <div id="error">
+            <div id="error" class="err">
 
 
 
